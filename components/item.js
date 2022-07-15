@@ -50,7 +50,7 @@ const Item = () => {
             container.appendChild(renderer.domElement)
             setRenderer(renderer)
 
-            const scale = scH * 0.009 + 2.8
+            const scale = scH * 0.01 + 2.8
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,

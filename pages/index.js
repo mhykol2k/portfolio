@@ -3,6 +3,8 @@ import { Link, Container, Heading, Box, SimpleGrid, Button, List, ListItem, useC
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import Uni from '../components/uni'
+import Grade from '../components/grade'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '@chakra-ui/react'
@@ -26,7 +28,7 @@ const Home = () => (
                 bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
                 css={{ backdropFilter: 'blur(10px)' }}
             >
-            Full-stack developer based near London.
+            Graduate developer based in the United Kingdom.
             </Box>
 
             <Box display={{ md: 'flex' }}>
@@ -34,7 +36,7 @@ const Home = () => (
                     <Heading as="h2" variant="page-title">
                         Michael McLain
                     </Heading>
-                    <p>Junior Software Engineer (Frontend/Backend)</p>
+                    <p>Recent Graduate / Junior Software Engineer</p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -62,21 +64,29 @@ const Home = () => (
                 </Box>
                 </Box>
             </Box>
+            <Section delay={0.2}>
+                <Heading as="h3" variant="section-title">
+                    Education
+                </Heading>
+                    <Uni>Canterbury Christ Church University</Uni>
+                    <Grade>
+                        Bachelor of Engineering - Software Engineering
+                    </Grade>
+                    <Grade>
+                        *Achieved First Class Honours
+                    </Grade>
+            </Section>
+
 
             <Section delay={1.0}>
                 <Heading as="h3" variant="section-title">
                     Projects
                 </Heading>
                 <Paragraph>
-                        Michael (mhykol) is a freelance and full-stack developer, based near London with a passion for building and creating software. 
-                        Something {' '}
-                    <Nextlink href="/works/inkdrop" passHref scroll={false}>
-                        <Link>Inkdrop</Link>
-                    </Nextlink>
-                    .
+                        Michael is a recent graduate. Originally from the United States, he is now based in the United Kingdom with a passion for building and creating software.
                 </Paragraph>
                 <Box align="center" my={4}>
-                    <Nextlink href="/works" passHref scroll={false}>
+                    <Nextlink href="/projects" passHref scroll={false}>
                         <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
                             Portfolio
                         </Button>
@@ -94,27 +104,40 @@ const Home = () => (
                     </BioSection>
                     <br></br>
                     <BioSection>
+                        <BioYear>2004</BioYear>
+                        Relocated to London, United Kingdom.
+                    </BioSection>
+                    <br></br>
+                    <BioSection>
+                        <BioYear>2016</BioYear>
+                        Completed A-Levels.
+                    </BioSection>
+                    <br></br>
+                    <BioSection>
                         <BioYear>2019</BioYear>
-                        Completed A-Levels from Tendring Technology College
+                        Enrolled on a Software Engineering Degree.
                     </BioSection>
                     <br></br>
                     <BioSection>
                         <BioYear>2022</BioYear>
-                        Completed BEng Software Engineering and graduated from Canterbury Christ Church University with First Class Honours.
+                       Graduated from University with First Class Honours.
                     </BioSection>
                     <br></br>
                     <BioSection>
-                        <BioYear>2023</BioYear>
-                        Got a job?
+                        <BioYear>2022</BioYear>
+                        Began Freelancing to learn more.
                     </BioSection>
             </Section>
 
             <Section delay={0.3}>
                 <Heading as="h3" variant="section-title">
-                    Interests
+                    Hobbies
                 </Heading>
                     <Paragraph>
-                        Machine Learning, Algorithmns, C#. 
+                        LEGO®
+                    </Paragraph>
+                    <Paragraph>
+                        Building PCs
                     </Paragraph>
             </Section>
 

@@ -58,6 +58,12 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0}}
         >
+          <LinkItem href="/projects" path={path}>
+            Projects
+          </LinkItem>
+          <LinkItem href="/contact" path={path}>
+            Contact
+          </LinkItem>
           <LinkItem
             target="_blank"
             href="https://github.com/mhykol2k"
@@ -69,12 +75,6 @@ const NavBar = props => {
           >
             <IoLogoGithub />
             Source Code
-          </LinkItem>
-          <LinkItem href="/projects" path={path}>
-            Projects
-          </LinkItem>
-          <LinkItem href="/contact" path={path}>
-            Contact
           </LinkItem>
         </Stack>
 
