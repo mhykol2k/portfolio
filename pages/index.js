@@ -98,19 +98,9 @@ const Home = () => (
                 <Heading as="h3" variant="section-title">
                     Summary
                 </Heading>
-                    <BioSection>
-                        <BioYear>2000</BioYear>
-                        Born in Chandler Arizona, United States.
-                    </BioSection>
-                    <br></br>
-                    <BioSection>
-                        <BioYear>2004</BioYear>
-                        Relocated to London, United Kingdom.
-                    </BioSection>
-                    <br></br>
-                    <BioSection>
-                        <BioYear>2016</BioYear>
-                        Completed A-Levels.
+                <BioSection>
+                        <BioYear>2022</BioYear>
+                       Graduated from University with First Class Honours.
                     </BioSection>
                     <br></br>
                     <BioSection>
@@ -119,14 +109,20 @@ const Home = () => (
                     </BioSection>
                     <br></br>
                     <BioSection>
-                        <BioYear>2022</BioYear>
-                       Graduated from University with First Class Honours.
+                        <BioYear>2016</BioYear>
+                        Completed A-Levels.
                     </BioSection>
                     <br></br>
                     <BioSection>
-                        <BioYear>2022</BioYear>
-                        Began Freelancing to learn more.
+                        <BioYear>2004</BioYear>
+                        Relocated to London, United Kingdom.
                     </BioSection>
+                    <br></br>
+                    <BioSection>
+                        <BioYear>2000</BioYear>
+                        Born in Chandler Arizona, United States.
+                    </BioSection>
+                    <br></br>
             </Section>
 
             <Section delay={0.3}>
