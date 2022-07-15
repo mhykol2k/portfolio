@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import * as THREE from "three"
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
-import { ItemSpinner,ItemContainer } from "./loader"
+import { ItemSpinner, ItemContainer } from "./loader"
 
 function easeOutCirc(x) {
     return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -50,7 +50,7 @@ const Item = () => {
             container.appendChild(renderer.domElement)
             setRenderer(renderer)
 
-            const scale = scH * 0.01 + 2.8
+            const scale = scH * 0.005 + 4.8
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
@@ -80,15 +80,15 @@ const Item = () => {
             })
             
             let req = null
-            let frame = 0
+            let frame = 40
             const animate = () => {
                 req = requestAnimationFrame(animate)
 
-                frame = frame <=100 ? frame + 1 : frame
+                frame = frame <= 100 ? frame + 1 : frame
 
                 if (frame <= 100) {
                     const p = initialCameraPosition
-                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 2
+                    const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 16
 
                     camera.position.y = 2
                     camera.position.x =

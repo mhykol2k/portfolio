@@ -23,7 +23,7 @@ export const ItemContainer = forwardRef(({ children }, ref) => (
     h={[280, 480, 640]}
     position="relative"
   >
-        {children}
+    {children}
     </Box>
 ))
 
