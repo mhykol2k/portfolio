@@ -12,7 +12,7 @@ export const Title = ({ children }) => (
             <ChevronRightIcon />{''}
         </span>
         <Heading display="inline-block" as="h3" fontSize={20} mb={4}>
-            {chilren}
+            {children}
         </Heading>
     </Box>
 )
@@ -21,7 +21,7 @@ export const WorkImage = ({ src, alt }) => (
     <Image borderRadius="lg" width="full" src={src} alt={alt} mb={4} />
 )
 
-export const Meta = ({ chilren }) => (
+export const Meta = ({ children }) => (
     <Badge colorScheme="green" mr={2}>
         {children}
     </Badge>

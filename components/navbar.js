@@ -58,12 +58,6 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0}}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
-          <LinkItem href="posts" path={path}>
-            Posts
-          </LinkItem>
           <LinkItem
             target="_blank"
             href="https://github.com/mhykol2k"
@@ -74,9 +68,18 @@ const NavBar = props => {
             pl={2}
           >
             <IoLogoGithub />
-            Source
+            Source Code
+          </LinkItem>
+          <LinkItem href="/projects" path={path}>
+            Projects
+          </LinkItem>
+          <LinkItem href="/contact" path={path}>
+            Contact
           </LinkItem>
         </Stack>
+
+        <Box flex={1} align="right">
+          <ThemeToggleButton />
 
         <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
           <Menu isLazy id="navbar-menu">
@@ -90,11 +93,11 @@ const NavBar = props => {
               <NextLink href="/" passHref>
                 <MenuItem as={Link}>About</MenuItem>
               </NextLink>
-              <NextLink href="/works" passHref>
-                <MenuItem as={Link}>Works</MenuItem>
+              <NextLink href="/projects" passHref>
+                <MenuItem as={Link}>Projects</MenuItem>
               </NextLink>
-              <NextLink href="/posts" passHref>
-                <MenuItem as={Link}>Posts</MenuItem>
+              <NextLink href="/contact" passHref>
+                <MenuItem as={Link}>Contact</MenuItem>
               </NextLink>
               <MenuItem
                 as={Link}
@@ -105,8 +108,7 @@ const NavBar = props => {
             </MenuList>
           </Menu>
         </Box>
-
-          
+        </Box>
       </Container>
     </Box>
   )

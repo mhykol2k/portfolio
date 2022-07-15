@@ -17,7 +17,7 @@ const LogoBox = styled.span`
     }
 
     &:hover img {
-        transform: rotate(20deg);
+        transform: scale(0.2);
     }
 `
 
@@ -28,15 +28,7 @@ const Logo = () => {
         <Link href="/" scroll={false}>
             <a>
                 <LogoBox>
-                    <Image src={logoimg} width={20} height={20} alt="logo"/>
-                    <Text
-                    color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                    fontFamily='M PLUS Rounded 1c", sans-serif'
-                    fontWeight='bold'
-                    ml={3}
-                >
-                    Michael McLain
-                </Text>
+                    <Image src={logoimg} width={20} height={20} alt=""/>
                 </LogoBox>
             </a>
         </Link>
