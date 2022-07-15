@@ -50,7 +50,7 @@ const Item = () => {
             container.appendChild(renderer.domElement)
             setRenderer(renderer)
 
-            const scale = scH * 0.005 + 2.8
+            const scale = scH * 0.009 + 2.8
             const camera = new THREE.OrthographicCamera(
                 -scale,
                 scale,
@@ -90,7 +90,7 @@ const Item = () => {
                     const p = initialCameraPosition
                     const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 2
 
-                    camera.position.y = 10
+                    camera.position.y = 2
                     camera.position.x =
                     p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed)
                 camera.position.z =
