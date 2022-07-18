@@ -80,7 +80,7 @@ const Item = () => {
             })
             
             let req = null
-            let frame = 40
+            let frame = 70
             const animate = () => {
                 req = requestAnimationFrame(animate)
 
