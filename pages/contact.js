@@ -14,16 +14,9 @@ import { InputLeftElement, InputRightElement } from '@chakra-ui/react'
 import { PhoneIcon, CheckIcon } from '@chakra-ui/icons'
 import { Textarea } from '@chakra-ui/react'
 
-const ProfileImage = chakra(Image, {
-    shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
-
 const Home = () => (
     <Layout>
         <Container>
-
-
-
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
                     Contact Me
@@ -37,7 +30,7 @@ const Home = () => (
                         fontSize='1.2em'
                         children={<ChatIcon color='gray.400'/>}
                     />
-                    <Input variant='filled' focusBorderColor='teal.400' placeholder='Enter Name' type='name'/>
+                    <Input variant='outline' focusBorderColor='teal.400' placeholder='Enter Name' type='name'/>
                     <InputRightElement children={<CheckIcon color='green.500' />} />
                   </InputGroup>
 
@@ -46,7 +39,7 @@ const Home = () => (
                         pointerEvents='none'
                         children='+44' color='gray.400'
                     />
-                    <Input variant='filled' focusBorderColor='teal.400' type='tel' placeholder='Phone number' />
+                    <Input variant='outline' focusBorderColor='teal.400' type='tel' placeholder='Phone number' />
                     <InputRightElement children={<CheckIcon color='green.500' />} />
                   </InputGroup>
 
@@ -57,12 +50,12 @@ const Home = () => (
                         fontSize='1.2em'
                         children={<EmailIcon color='gray.400' />}
                     />
-                    <Input variant='filled' focusBorderColor='teal.400' type='email' placeholder='Enter Email' />
+                    <Input variant='outline' focusBorderColor='teal.400' type='email' placeholder='Enter Email' />
                     <InputRightElement children={<CheckIcon color='green.500' />} />
                   </InputGroup>
 
                   <InputGroup>
-                    <Textarea variant='filled' color='gray.400' size='md' placeholder='Extended Message' />
+                    <Textarea variant='outline' focusBorderColor='teal.400' color='gray.400' size='md' placeholder='Extended Message' />
                     <InputRightElement children={<CheckIcon color='green.500' />} />
                   </InputGroup>
                 </Stack>
