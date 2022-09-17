@@ -1,9 +1,9 @@
 import Nextlink from 'next/link'
-import { Link, Container, Heading, Box, SimpleGrid, Button, List, ListItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import { Link, Container, Heading, Box, Divider, Button, List, ListItem, useColorModeValue, chakra } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Uni from '../components/uni'
+import { BioSection, BioYear, BulletPoint, Dates, Programmes, ProgrammesList, Uni } from '../components/bio'
+//
 import Grade from '../components/grade'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -28,7 +28,7 @@ const Home = () => (
                 bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
                 css={{ backdropFilter: 'blur(10px)' }}
             >
-            Graduate developer based in the United Kingdom.
+                Graduate Software Engineer based in the United Kingdom
             </Box>
 
             <Box display={{ md: 'flex' }}>
@@ -36,7 +36,7 @@ const Home = () => (
                     <Heading as="h2" variant="page-title">
                         Michael McLain
                     </Heading>
-                    <p>Recent Graduate / Junior Software Engineer</p>
+                    <p>Graduate C#, Flutter and Python Developer</p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -66,15 +66,51 @@ const Home = () => (
             </Box>
             <Section delay={0.2}>
                 <Heading as="h3" variant="section-title">
+                    Professional Experience
+                </Heading>
+                    <Dates>May 2022 - Present</Dates>
+                    <Uni>Silver Linings Group LTD</Uni>
+                    <Divider my={1} />
+                    <Grade>
+                        Jr. Software Engineer
+                    </Grade>
+                        <BulletPoint>
+                            <li>
+                                <p>Worked on an array of Flutter projects and API</p>
+                            </li>
+                            <li>
+                                gssh
+                            </li>
+                        </BulletPoint>
+            </Section>
+            <Section delay={0.2}>
+                <Heading as="h3" variant="section-title">
                     Education
                 </Heading>
+                    <Dates>Sept 2019 - June 2022</Dates>
                     <Uni>Canterbury Christ Church University</Uni>
+                    <Divider my={1} />
                     <Grade>
                         Bachelor of Engineering - Software Engineering
                     </Grade>
-                    <Grade>
-                        *Achieved First Class Honours
-                    </Grade>
+                    <BulletPoint>
+                        <li>
+                                <b>Awarded First Class Honours Degree</b>
+                        </li>
+                    </BulletPoint>
+                    <Programmes>Programmes:</Programmes>
+                    <ProgrammesList>
+                        Data Structures, Algorithmns, Object-Oriented Programming in C#, Frameworks, Advanced Operating Systems, Advanced Databases, Big Data, Networking, Human Computer Interaction, Software Lifecycles and Cybersecurity.
+                    </ProgrammesList>
+                    <br></br>
+                    <br></br>
+                    <Dates>Sept 2017 - June 2019</Dates>
+                    <Uni>Tendring Technology College Sxith Form</Uni>
+                    <Divider my={1} />
+                    <Programmes>A-Level Subjects:</Programmes>
+                    <ProgrammesList>
+                        Mathematics, Computer Science, Information Technology, Psychology.
+                    </ProgrammesList>
             </Section>
 
 
@@ -82,13 +118,11 @@ const Home = () => (
                 <Heading as="h3" variant="section-title">
                     Projects
                 </Heading>
-                <Paragraph>
-                        Michael is a recent graduate. Originally from the United States, he is now based in the United Kingdom with a passion for building and creating software.
-                </Paragraph>
+                <Divider my={1} />
                 <Box align="center" my={4}>
                     <Nextlink href="/projects" passHref scroll={false}>
                         <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                            View Portfolio
+                            Portfolio
                         </Button>
                     </Nextlink>
                 </Box>
@@ -98,49 +132,52 @@ const Home = () => (
                 <Heading as="h3" variant="section-title">
                     Summary
                 </Heading>
-                <BioSection>
+                <Divider my={1} />
+                    <BioSection>
+                        <BioYear>2022</BioYear>
+                       Internship at Silver Linings Group LTD.
+                    </BioSection>
+                    <BioSection>
                         <BioYear>2022</BioYear>
                        Graduated from University with First Class Honours.
                     </BioSection>
-                    <br></br>
                     <BioSection>
                         <BioYear>2019</BioYear>
                         Enrolled on a Software Engineering Degree.
                     </BioSection>
-                    <br></br>
                     <BioSection>
                         <BioYear>2016</BioYear>
                         Completed A-Levels.
                     </BioSection>
-                    <br></br>
                     <BioSection>
                         <BioYear>2004</BioYear>
                         Relocated to London, United Kingdom.
                     </BioSection>
-                    <br></br>
                     <BioSection>
                         <BioYear>2000</BioYear>
                         Born in Chandler Arizona, United States.
                     </BioSection>
-                    <br></br>
             </Section>
 
             <Section delay={0.5}>
                 <Heading as="h3" variant="section-title">
                     Hobbies
                 </Heading>
+                <Divider my={1} />
                     <Paragraph>
-                        LEGO®
-                    </Paragraph>
-                    <Paragraph>
-                        Building PCs
-                    </Paragraph>
+Even outside of work, I spend much of my
+time working on building computers and
+developing personal applications. When not
+programming, I also enjoy running and
+staying active outdoors, as well as keeping
+up with my reading in both fiction and
+computer magazines.</Paragraph>
             </Section>
-
             <Section delay={0.6}>
                 <Heading as="h3" variant="section-title">
                     Find me
                 </Heading>
+                <Divider my={1} />
                 <List>
                     <ListItem>
                         <Link href="https://github.com/mhykol2k" target="_blank">
