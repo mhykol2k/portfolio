@@ -4,7 +4,6 @@ import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
 const LogoBox = styled.span`
-    font-weight: bold;
     font-size: 18px;
     display: inline-flex;
     align-items: center;
@@ -19,6 +18,10 @@ const LogoBox = styled.span`
     &:hover img {
         transform: scale(0.8);
     }
+
+    &:hover {
+      text-decoration: underline;
+    }
 `
 
 const Logo = () => {
@@ -28,7 +31,7 @@ const Logo = () => {
       <Link href="/" scroll={false}>
         <a>
           <LogoBox>
-            <Image src={footPrintImg} width={20} height={20} alt="" />
+            <Image src={footPrintImg} width={20} height={20} alt="" />Home
           </LogoBox>
         </a>
       </Link>
