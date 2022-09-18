@@ -31,24 +31,9 @@ import {
           Currently the production version is being used in the clients bar.
         </P>
         <UnorderedList ml={4} my={4}>
-          <ListItem>ファイル転送がサイズ制限無く高速に出来ます。</ListItem>
-          <ListItem>複数のコンピュータ間で同時に通信が出来ます。</ListItem>
-          <ListItem>
-            簡単接続機能により、面倒な接続作業を自動で行います。
-          </ListItem>
-          <ListItem>
-            一つのポート開放だけで、様々な通信が出来る強力なプロトコル。
-          </ListItem>
-          <ListItem>
-            IM機能を装備しています。会話中に写真を表示したりもできます。
-          </ListItem>
-          <ListItem>
-            ファイル共有機能で、設定した公開フォルダを相手に見せることが出来ます。
-          </ListItem>
-          <ListItem>MSN/Windowsメッセンジャーからの招待で接続できます。</ListItem>
-          <ListItem>
-            画面転送機能で、相手に自分のデスクトップを見せることが出来ます。
-          </ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
+          <ListItem></ListItem>
         </UnorderedList>
   
         <List ml={4} my={4}>
@@ -62,7 +47,7 @@ import {
           </ListItem>
           <ListItem>
             <Meta>Download</Meta>
-            <Link href="http://odoruinu.net.s3.amazonaws.com/software/amembo/amembo0515123.zip">
+            <Link href="">
               gr8-latest-1.1.0
             </Link>
           </ListItem>
@@ -72,7 +57,7 @@ import {
           </ListItem>
           <ListItem>
             <Meta>Manual</Meta>
-            <Link href="https://w.atwiki.jp/amembo/">wiki</Link>
+            <Link href="">wiki</Link>
           </ListItem>
         </List>
   
