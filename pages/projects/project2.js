@@ -6,6 +6,7 @@ import {
     Image,
     List,
     ListItem,
+    Divider,
     AspectRatio
   } from '@chakra-ui/react'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -19,6 +20,7 @@ import {
         <Title>
           CLI-Portfolio <Badge>May 2021-</Badge>
         </Title>
+        <Divider my={1}></Divider>
         <P>
           Information
         </P>

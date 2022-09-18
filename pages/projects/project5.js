@@ -8,7 +8,8 @@ import {
     UnorderedList,
     Heading,
     Center,
-    Image
+    Image,
+    Divider
   } from '@chakra-ui/react'
   import Layout from '../../components/layouts/article'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -21,6 +22,7 @@ import {
         <Title>
           GitHub Snake <Badge>2020-2021</Badge>
         </Title>
+        <Divider my={1}></Divider>
         <P>
           GitHub Snake that eats contributions
         </P>

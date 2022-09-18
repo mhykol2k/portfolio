@@ -8,7 +8,8 @@ import {
     UnorderedList,
     Heading,
     Center,
-    Image
+    Image,
+    Divider
   } from '@chakra-ui/react'
   import Layout from '../../components/layouts/article'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -21,6 +22,7 @@ import {
         <Title>
           EPOS-BAR Application <Badge>Dec 2021 - Aug 2022</Badge>
         </Title>
+        <Divider my={1}></Divider>
         <Center my={6}>
           <Image src="/images/projects/gr8danes_icon.png" alt="icon" />
         </Center>

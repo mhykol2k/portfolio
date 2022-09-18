@@ -8,7 +8,8 @@ import {
     UnorderedList,
     Heading,
     Center,
-    Image
+    Image,
+    Divider
   } from '@chakra-ui/react'
   import Layout from '../../components/layouts/article'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -21,6 +22,7 @@ import {
         <Title>
           Adavnced Databases Group Project <Badge>May 2022 - June 2022</Badge>
         </Title>
+        <Divider my={1}></Divider>
         <P>
           Advanced Databases and Big Data Module
         </P>

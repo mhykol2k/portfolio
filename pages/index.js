@@ -1,17 +1,16 @@
 import Nextlink from 'next/link'
-import { Link, Container, Heading, Box, Divider, Button, List, ListItem, useColorModeValue, chakra } from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Link, Container, Heading, Box, Divider, Button, List, ListItem, useColorModeValue, Collapse, chakra } from '@chakra-ui/react'
+import { ChevronRightIcon, LinkIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear, BulletPoint, Dates, Programmes, ProgrammesList, Uni } from '../components/bio'
-//
 import Grade from '../components/grade'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '@chakra-ui/react'
 import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-//import thumbYouTube from '../public/images/links/youtube.png'
-//import thumbInkdrop from '../public/images/links/inkdrop_eyecatching.png'
 import Image from 'next/image'
+import React from 'react';
+import CollapseEx from '../components/collapse-toggle-button'
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -30,7 +29,6 @@ const Home = () => (
             >
                 Graduate Software Engineer based in the United Kingdom
             </Box>
-
             <Box display={{ md: 'flex' }}>
                 <Box flexGrow={1}>
                     <Heading as="h2" variant="page-title">
@@ -98,18 +96,11 @@ const Home = () => (
                     <ProgrammesList>
                         Data Structures, Algorithmns, Object-Oriented Programming in C#, Frameworks, Advanced Operating Systems, Advanced Databases, Big Data, Networking, Human Computer Interaction, Software Lifecycles and Cybersecurity.
                     </ProgrammesList>
-                    <br></br>
-                    <br></br>
-                    <Dates>Sept 2017 - June 2019</Dates>
-                    <Uni>Tendring Technology College Sxith Form</Uni>
-                    <Divider my={1} />
-                    <Programmes>A-Level Subjects:</Programmes>
-                    <ProgrammesList>
-                        Mathematics, Computer Science, Information Technology, Psychology.
-                    </ProgrammesList>
+
+                    <Box align="center" my={3}>
+                    <CollapseEx />
+                    </Box>
             </Section>
-
-
             <Section delay={0.3}>
                 <Heading as="h3" variant="section-title">
                     Projects
@@ -118,9 +109,23 @@ const Home = () => (
                 <Box align="center" my={4}>
                     <Nextlink href="/projects" passHref scroll={false}>
                         <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                            Portfolio
+                            Projects
                         </Button>
                     </Nextlink>
+                </Box>
+            </Section>
+
+            <Section delay={0.3}>
+                <Heading as="h3" variant="section-title">
+                    CV
+                </Heading>
+                <Divider my={1} />
+                <Box align="center" my={4}>
+                    <a href="/CV.pdf" passHref target="_blank">
+                        <Button rightIcon={<LinkIcon />} colorScheme="teal">
+                            CV
+                        </Button>
+                    </a>
                 </Box>
             </Section>
 
@@ -154,10 +159,9 @@ const Home = () => (
                         Born in Chandler Arizona, United States.
                     </BioSection>
             </Section>
-
             <Section delay={0.5}>
                 <Heading as="h3" variant="section-title">
-                    Hobbies
+                    Interests
                 </Heading>
                 <Divider my={1} />
                     <Paragraph>

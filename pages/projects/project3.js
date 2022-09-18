@@ -8,7 +8,8 @@ import {
     UnorderedList,
     Heading,
     Center,
-    Image
+    Image,
+    Divider
   } from '@chakra-ui/react'
   import Layout from '../../components/layouts/article'
   import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -21,7 +22,7 @@ import {
         <Title>
           3D Voxel Portfolio <Badge>Jun 2022-</Badge>
         </Title>
-  
+        <Divider my={1}></Divider>
         <List ml={4} my={4}>
           <ListItem>
             <Meta>P[latform</Meta>
