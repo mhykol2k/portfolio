@@ -94,7 +94,8 @@ export default function HookForm() {
         </FormErrorMessage>
       </FormControl>
       <Box align="center">
-      <Button mt={1} colorScheme='teal' isLoading={isSubmitting} type='submit'>
+        <br></br>
+      <Button my={1} colorScheme='teal' isLoading={isSubmitting} type='submit'>
         Submit
       </Button>
       </Box>
