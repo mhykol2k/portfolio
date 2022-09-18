@@ -36,7 +36,7 @@ const Home = () => (
                     <Heading as="h2" variant="page-title">
                         Michael McLain
                     </Heading>
-                    <p>Graduate C#, Flutter and Python Developer</p>
+                    <p>C#, Flutter and React Developer</p>
                 </Box>
                 <Box
                     flexShrink={0}
@@ -72,16 +72,12 @@ const Home = () => (
                     <Uni>Silver Linings Group LTD</Uni>
                     <Divider my={1} />
                     <Grade>
-                        Jr. Software Engineer
+                        Jr. Software Engineer (Internship)
                     </Grade>
-                        <BulletPoint>
-                            <li>
-                                <p>Worked on an array of Flutter projects and API</p>
-                            </li>
-                            <li>
-                                gssh
-                            </li>
-                        </BulletPoint>
+                        <Programmes>Duties:</Programmes>
+                    <ProgrammesList>
+                        ...
+                    </ProgrammesList>
             </Section>
             <Section delay={0.2}>
                 <Heading as="h3" variant="section-title">
