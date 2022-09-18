@@ -5,12 +5,14 @@ import {
   FormControl,
   Input,
   Button,
+  Box
 } from '@chakra-ui/react'
 
 export default function HookForm() {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm()
 
@@ -19,7 +21,7 @@ export default function HookForm() {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2))
         resolve()
-      }, 3000)
+      }, 3000), reset();
     })
   }
 
@@ -91,10 +93,11 @@ export default function HookForm() {
           {errors.text && errors.text.message}
         </FormErrorMessage>
       </FormControl>
-      
-      <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
+      <Box align="center">
+      <Button mt={1} colorScheme='teal' isLoading={isSubmitting} type='submit'>
         Submit
       </Button>
+      </Box>
     </form>
   )
 }

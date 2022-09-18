@@ -1,5 +1,5 @@
 import Nextlink from 'next/link'
-import { Link, Container, Heading, Box, SimpleGrid, Button, List, ListItem, useColorModeValue, chakra } from '@chakra-ui/react'
+import { Link, Container, Heading, Box, SimpleGrid, Button, List, ListItem, useColorModeValue, useColorMode, chakra } from '@chakra-ui/react'
 import { ChatIcon, ChevronRightIcon, EditIcon, EmailIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -15,7 +15,11 @@ import HookForm from '../components/hook-form'
 
 const Home = () => (
     <Layout>
-        <Container>
+        <Container
+            rounded="xl"
+            p="8"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+            css={{ backdropFilter: 'blur(10px)' }}>
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
                     Contact Me
