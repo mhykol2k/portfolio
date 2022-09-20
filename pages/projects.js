@@ -2,25 +2,22 @@ import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { ProjectGridItem } from '../components/grid-item'
-
 import project1 from '../public/images/projects/project1.png'
 import project2 from '../public/images/projects/project2.png'
 import project3 from '../public/images/projects/project3.png'
 import project4 from '../public/images/projects/project4.png'
 import project5 from '../public/images/projects/project5.png'
 import project6 from '../public/images/projects/project6.png'
-import thumbStyly from '../public/images/projects/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/projects/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/projects/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/projects/amembo_eyecatch.png'
 
 const Projects = () => (
   <Layout title="Projects">
     <Container>
       <br></br>
-      <Heading as="h3" align="left" fontSize={28} mb={4}>
-        Projects
+      <Heading as="h3" align="center" fontSize={28} mb={2} textDecoration="underline" textUnderlineOffset={8} textDecorationThickness= {2}>
+        Recent Projects
       </Heading>
+
+      <Divider my={6}/>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
@@ -49,7 +46,7 @@ const Projects = () => (
       <Section delay={0.2}>
         <Divider my={6} />
 
-        <Heading as="h3" fontSize={28} mb={4}>
+        <Heading as="h3" align="center" fontSize={28} mb={2} textDecoration="underline" textUnderlineOffset={8} textDecorationThickness= {2}>
           Collaborations
         </Heading>
       </Section>
@@ -79,6 +76,7 @@ const Projects = () => (
         <Section delay={0.5}>
         </Section>
       </SimpleGrid> */}
+      <Divider my={6} />
     </Container>
   </Layout>
 )
