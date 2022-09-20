@@ -1,4 +1,3 @@
-import Logo from './logo'
 import NextLink from 'next/link'
 import { Container, Box, Link, Stack, Heading, Flex, Menu, MenuItem, MenuList, MenuButton, IconButton, useColorModeValue } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -43,11 +42,10 @@ const NavBar = props => {
         maxW="container.md"
         wrap="wrap"
         align="center"
-        justify="space-between"
+        justify="space-between" 
       >
-        <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-            <Logo />
+        <Flex align="center" ml={32}>
+          <Heading as="h1" size="lg" letterSpacing={'tighter'} outline-color={'#D5A021'}>
           </Heading>
         </Flex>
 
@@ -59,6 +57,9 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0}}
         >
+          <LinkItem href="/" path={path}>
+                About
+          </LinkItem>
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
@@ -104,7 +105,7 @@ const NavBar = props => {
                 as={Link}
                 href="https://github.com/mhykol2k"
               >
-                View Source
+                Source
               </MenuItem>
             </MenuList>
           </Menu>
