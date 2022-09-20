@@ -27,7 +27,6 @@ function CollapseEx() {
       <Collapse in={isOpen} animateOpacity transition={{ duration: 1 }}>
         <Box
           align="left"
-          p=""
           color="useColorModeValue"
           mt="2"
           bg="useColorModeValue"

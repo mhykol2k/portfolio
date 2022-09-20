@@ -12,7 +12,7 @@ import {
   Collapse,
   chakra,
 } from "@chakra-ui/react";
-import { ChevronRightIcon, LinkIcon } from "@chakra-ui/icons";
+import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
 import {
   BioSection,
@@ -59,7 +59,12 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Michael McLain
           </Heading>
-          <p>C#, Flutter and React Developer</p>
+          <p>Flutter and C# Developer</p>
+          <a href="/CV.pdf" passHref target="_blank">
+            <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
+              CV
+            </Button>
+          </a>
         </Box>
         <Box
           flexShrink={0}
@@ -114,9 +119,7 @@ const Home = () => (
         <Programmes>Programmes:</Programmes>
         <ProgrammesList>
           Data Structures, Algorithmns, Object-Oriented Programming in C#,
-          Frameworks, Advanced Operating Systems, Advanced Databases, Big Data,
-          Networking, Human Computer Interaction, Software Lifecycles and
-          Cybersecurity.
+          Frameworks, Advanced Operating Systems and Advanced Databases.
         </ProgrammesList>
 
         <Box align="center" my={3}>
@@ -128,26 +131,12 @@ const Home = () => (
           Projects
         </Heading>
         <Divider my={1} />
-        <Box align="center" my={4}>
+        <Box align="center" my={2}>
           <Nextlink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Projects
             </Button>
           </Nextlink>
-        </Box>
-      </Section>
-
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          CV
-        </Heading>
-        <Divider my={1} />
-        <Box align="center" my={4}>
-          <a href="/CV.pdf" passHref target="_blank">
-            <Button rightIcon={<LinkIcon />} colorScheme="teal">
-              CV
-            </Button>
-          </a>
         </Box>
       </Section>
 
@@ -189,8 +178,7 @@ const Home = () => (
         <Paragraph>
           Even outside of work, I spend much of my time working on building
           computers and developing personal applications. When not programming,
-          I also enjoy running and staying active outdoors, as well as keeping
-          up with my reading in both fiction and computer magazines.
+          I enjoy running and staying active outdoors.
         </Paragraph>
       </Section>
       <Section delay={0.6}>
@@ -198,28 +186,28 @@ const Home = () => (
           Find me
         </Heading>
         <Divider my={1} />
-        <List>
+        <List align="center">
           <ListItem>
             <Link href="https://github.com/mhykol2k" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
-              ></Button>
+              >GitHub</Button>
+            </Link>
+            <Link href="https://www.linkedin.com/in/michaeljmclain/" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoLinkedin />}
+              >LinkedIn</Button>
             </Link>
             <Link href="https://twitter.com/mhykol2k" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
-              ></Button>
-            </Link>
-            <Link href="https://linkedin.com/michaeljmclain" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoLinkedin />}
-              ></Button>
+              >Twitter</Button>
             </Link>
           </ListItem>
         </List>
