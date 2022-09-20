@@ -1,17 +1,12 @@
+import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Button,
   Collapse,
   Divider,
   useDisclosure,
   Box,
-  useColorModeValue,
 } from "@chakra-ui/react";
-import { Fade, ScaleFade, Slide, SlideFade } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
-  BioSection,
-  BioYear,
-  BulletPoint,
   Dates,
   Programmes,
   ProgrammesList,

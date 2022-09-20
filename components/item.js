@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { loadGLTFModel } from "../lib/model";
 import { ItemSpinner, ItemContainer } from "./loader";
+import * as THREE from "three";
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4));

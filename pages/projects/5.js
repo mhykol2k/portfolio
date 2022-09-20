@@ -12,8 +12,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, WorkImage, Meta } from "../../components/work";
+import { Title, ProjectImage, Meta } from "../../components/project";
 import P from "../../components/paragraph";
 
 const Work = () => (
@@ -54,7 +53,7 @@ const Work = () => (
       </Heading>
 
       <SimpleGrid columns={1} gap={2}>
-        <WorkImage src="/images/projects/github-contribution-grid-snake.gif" />
+        <ProjectImage src="/images/projects/github-contribution-grid-snake.gif" />
       </SimpleGrid>
     </Container>
   </Layout>

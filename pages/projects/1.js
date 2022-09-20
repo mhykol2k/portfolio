@@ -12,8 +12,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Title, WorkImage, Meta } from "../../components/work";
+import { Title, ProjectImage, Meta } from "../../components/project";
 import P from "../../components/paragraph";
 
 const Project = () => (
@@ -64,10 +63,10 @@ const Project = () => (
         <Center>Media</Center>
       </Heading>
       <SimpleGrid columns={1} gap={2}>
-        <WorkImage src="/images/projects/image_01.png" alt="image" />
-        <WorkImage src="/images/projects/image_02.png" alt="image" />
+        <ProjectImage src="/images/projects/image_01.png" alt="image" />
+        <ProjectImage src="/images/projects/image_02.png" alt="image" />
       </SimpleGrid>
-      <WorkImage src="/images/projects/image_03.png" alt="image" />
+      <ProjectImage src="/images/projects/image_03.png" alt="image" />
     </Container>
   </Layout>
 );

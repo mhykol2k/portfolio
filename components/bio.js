@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { Box } from "@chakra-ui/react";
 
 export const BioSection = styled(Box)`
   margin-bottom: 8px;
