@@ -188,9 +188,6 @@ const Home = () => (
         </Paragraph>
       </Section>
       <Section delay={0.6}>
-        <Heading as="h3" variant="section-title">
-          Find me
-        </Heading>
         <Divider my={1} />
         <List align="center">
           <ListItem>
