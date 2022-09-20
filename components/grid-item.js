@@ -1,52 +1,52 @@
-import NextLink from 'next/link'
-import Image from 'next/image'
-import { Box, Text, LinkBox, LinkOverlay, Link } from '@chakra-ui/react'
-import { Global } from '@emotion/react'
+import NextLink from "next/link";
+import Image from "next/image";
+import { Box, Text, LinkBox, LinkOverlay, Link } from "@chakra-ui/react";
+import { Global } from "@emotion/react";
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
-    <Box width="100%" textAlign="center">
-        <LinkBox cursor="pointer">
-            <Image
-                src={thumbnail}
-                alt={title}
-                className="grid-item-thumbnail"
-                placeholder="blur"
-                loading="lazy"
-            />
-            <LinkOverlay href={href} target="_blank">
-                <Text mt={2}>{title}</Text>
-            </LinkOverlay>
-        </LinkBox>
-    </Box>
-)
+  <Box width="100%" textAlign="center">
+    <LinkBox cursor="pointer">
+      <Image
+        src={thumbnail}
+        alt={title}
+        className="grid-item-thumbnail"
+        placeholder="blur"
+        loading="lazy"
+      />
+      <LinkOverlay href={href} target="_blank">
+        <Text mt={2}>{title}</Text>
+      </LinkOverlay>
+    </LinkBox>
+  </Box>
+);
 
 export const ProjectGridItem = ({ children, id, title, thumbnail }) => (
-    <Box width="100%" textAlign="center">
-        <NextLink href={`/projects/${id}`} passHref scroll={false}>
-            <LinkBox cursor="pointer">
-                <Image
-                    src={thumbnail}
-                    alt={title}
-                    className="grid-item-thumbnail"
-                    placeholder="blur"
-                />
-                <LinkOverlay href={`/projects/${id}`}>
-                    <Text mt={2} fontSize={20}>
-                        {title}
-                    </Text>
-                </LinkOverlay>
-                <Text fontSize={14}>{children}</Text>
-            </LinkBox>
-        </NextLink>
-    </Box>
-)
+  <Box width="100%" textAlign="center">
+    <NextLink href={`/projects/${id}`} passHref scroll={false}>
+      <LinkBox cursor="pointer">
+        <Image
+          src={thumbnail}
+          alt={title}
+          className="grid-item-thumbnail"
+          placeholder="blur"
+        />
+        <LinkOverlay href={`/projects/${id}`}>
+          <Text mt={2} fontSize={20}>
+            {title}
+          </Text>
+        </LinkOverlay>
+        <Text fontSize={14}>{children}</Text>
+      </LinkBox>
+    </NextLink>
+  </Box>
+);
 
 export const GridItemStyle = () => (
-    <Global
+  <Global
     styles={`
         .grid-item-thumbnail {
           border-radius: 12px;
         }
       `}
-    />
-)
+  />
+);

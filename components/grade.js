@@ -1,7 +1,7 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 const Grade = styled.p`
-    font-style: italic;
-`
+  font-style: italic;
+`;
 
-export default Grade
+export default Grade;
