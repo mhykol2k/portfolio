@@ -1,6 +1,6 @@
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import {
-  Button,
+  IconButton,
   Collapse,
   Divider,
   useDisclosure,
@@ -18,15 +18,13 @@ function CollapseEx() {
 
   return (
     <>
-      <Button
-        rightIcon={<ChevronRightIcon />}
-        colorScheme="teal"
+      <IconButton
+        colorScheme={"teal"}
+        icon={isOpen ? <TriangleUpIcon /> : <TriangleDownIcon />}
         onClick={onToggle}
       >
-        {" "}
-        {isOpen ? "Less" : "More"}
-      </Button>
-      <Collapse in={isOpen} animateOpacity>
+      </IconButton>
+      <Collapse in={isOpen} animateOpacity transition={{ duration: 1 }}>
         <Box
           align="left"
           p=""
