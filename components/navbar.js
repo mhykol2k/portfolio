@@ -121,6 +121,9 @@ const NavBar = (props) => {
                 <MenuItem as={Link} href="https://github.com/mhykol2k">
                   Source
                 </MenuItem>
+                <MenuItem href="/CV.pdf" path={path}>
+                CV
+              </MenuItem>
               </MenuList>
             </Menu>
           </Box>
