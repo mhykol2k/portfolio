@@ -101,7 +101,10 @@ const Home = () => (
         <Divider my={1} />
         <Grade>Jr. Software Engineer (Internship)</Grade>
         <Programmes>Duties:</Programmes>
-        <ProgrammesList>...</ProgrammesList>
+        <ProgrammesList>
+        This role involves learning the codebase, attending design meetings, writing basic code, fixing bugs, and assisting the Development Manager in all design-related tasks.
+        Additionally, as a part of this role I have assisted the development team with all aspects of software lifecycle.
+        </ProgrammesList>
       </Section>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
