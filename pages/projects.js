@@ -21,23 +21,23 @@ const Projects = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <ProjectGridItem id="project1" title="EPOS / Bar App" thumbnail={project1}>
+          <ProjectGridItem id="1" title="EPOS / Bar App" thumbnail={project1}>
             Electronic Point of Sale Application built using Flutter, built for client in Frinton-on-Sea.
           </ProjectGridItem>
         </Section>
         <Section>
-          <ProjectGridItem id="project2" title="Linux CLI Portfolio" thumbnail={project2}>
+          <ProjectGridItem id="2" title="Linux CLI Portfolio" thumbnail={project2}>
           'Linux Style' Command Line Interface Portfolio. Built with TypeScript and tested with Cypress.
           </ProjectGridItem>
         </Section>
 
         <Section delay={0.1}>
-          <ProjectGridItem id="project3" title="3D Voxel Portfolio" thumbnail={project3}>
+          <ProjectGridItem id="3" title="3D Voxel Portfolio" thumbnail={project3}>
             Voxel Portfolio created using Three.js, ChakraUI and Next.js
           </ProjectGridItem>
         </Section>
         <Section delay={0.1}>
-          <ProjectGridItem id="project4" thumbnail={project4} title="Next.js Pokèdex">
+          <ProjectGridItem id="4" thumbnail={project4} title="Next.js Pokèdex">
             Pokèdex Project
           </ProjectGridItem>
         </Section>
@@ -53,12 +53,12 @@ const Projects = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
-          <ProjectGridItem id="project5" thumbnail={project5} title="GitHub Snake">
+          <ProjectGridItem id="5" thumbnail={project5} title="GitHub Snake">
             A snake that eats GitHub contributions
           </ProjectGridItem>
         </Section>
         <Section delay={0.3}>
-          <ProjectGridItem id="project6" thumbnail={project6} title="Advanced DB Project">
+          <ProjectGridItem id="6" thumbnail={project6} title="Advanced DB Project">
             University group project
           </ProjectGridItem>
         </Section>
