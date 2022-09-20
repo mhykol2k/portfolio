@@ -6,12 +6,7 @@ import {
   useDisclosure,
   Box,
 } from "@chakra-ui/react";
-import {
-  Dates,
-  Programmes,
-  ProgrammesList,
-  Uni,
-} from "../components/bio";
+import { Dates, Programmes, ProgrammesList, Uni } from "../components/bio";
 
 function CollapseEx() {
   const { isOpen, onToggle } = useDisclosure();
@@ -22,8 +17,7 @@ function CollapseEx() {
         colorScheme={"teal"}
         icon={isOpen ? <TriangleUpIcon /> : <TriangleDownIcon />}
         onClick={onToggle}
-      >
-      </IconButton>
+      ></IconButton>
       <Collapse in={isOpen} animateOpacity transition={{ duration: 1 }}>
         <Box
           align="left"

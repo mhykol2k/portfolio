@@ -22,10 +22,18 @@ const Work = () => (
         Next-Pokédex <Badge>May 2021- June 2021</Badge>
       </Title>
       <Divider my={1}></Divider>
-      <P>Personal Project created to swiftly identify the shiny variant(s) of any Pokémon registered to official the Pokédex.</P>
-      <P>Allows the user to search a Pokémon name and quickly returns what the shiny variant(s) look like without having to use Google.</P>
+      <P>
+        Personal Project created to swiftly identify the shiny variant(s) of any
+        Pokémon registered to official the Pokédex.
+      </P>
+      <P>
+        Allows the user to search a Pokémon name and quickly returns what the
+        shiny variant(s) look like without having to use Google.
+      </P>
       <br></br>
-      <P>Uses <b>PokéAPI v2</b>.</P>
+      <P>
+        Uses <b>PokéAPI v2</b>.
+      </P>
 
       <Heading as="h4" fontSize={16} my={6}>
         Roadmap
@@ -33,12 +41,23 @@ const Work = () => (
       <UnorderedList ml={4} my={4}>
         <ListItem>Search by Pokémon ID.</ListItem>
         <ListItem>Search by Pokémon type.</ListItem>
-        <ListItem>Search by Pokémon status (Legendary, Mythical, Ultra Beast).</ListItem>
-        <ListItem>Use the '+' operator to initiate search for the entire Pokémon evolution line.</ListItem>
-        <ListItem>Combine strings with the '&' operator, and create complex queries.</ListItem>
-        <ListItem>Add Pokémon with the ',' operator as a separator to display specific Pokémon.</ListItem>
-        <ListItem>Use the'!' operator to exclude specific Pokémon from the search.</ListItem>
-       
+        <ListItem>
+          Search by Pokémon status (Legendary, Mythical, Ultra Beast).
+        </ListItem>
+        <ListItem>
+          Use the '+' operator to initiate search for the entire Pokémon
+          evolution line.
+        </ListItem>
+        <ListItem>
+          Combine strings with the '&' operator, and create complex queries.
+        </ListItem>
+        <ListItem>
+          Add Pokémon with the ',' operator as a separator to display specific
+          Pokémon.
+        </ListItem>
+        <ListItem>
+          Use the'!' operator to exclude specific Pokémon from the search.
+        </ListItem>
       </UnorderedList>
 
       <List ml={4} my={4}>

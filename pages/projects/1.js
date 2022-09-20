@@ -23,8 +23,8 @@ const Project = () => (
       </Title>
       <Divider my={1}></Divider>
       <P>
-        Complete Flutter Application that sends finished orders to an existing inventory management
-        system via REST API.
+        Complete Flutter Application that sends finished orders to an existing
+        inventory management system via REST API.
       </P>
       <UnorderedList ml={4} my={4}>
         <ListItem>Flutter</ListItem>
@@ -41,7 +41,9 @@ const Project = () => (
         </ListItem>
         <ListItem>
           <Meta>Download</Meta>
-          <Link href="https://github.com/mhykol2k/gr8danes/archive/refs/heads/main.zip">latest-v1.0.0</Link>
+          <Link href="https://github.com/mhykol2k/gr8danes/archive/refs/heads/main.zip">
+            latest-v1.0.0
+          </Link>
         </ListItem>
         <ListItem>
           <Meta>Last update</Meta>

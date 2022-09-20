@@ -102,8 +102,11 @@ const Home = () => (
         <Grade>Jr. Software Engineer (Internship)</Grade>
         <Programmes>Duties:</Programmes>
         <ProgrammesList>
-        This role involves learning the codebase, attending design meetings, writing basic code, fixing bugs, and assisting the Development Manager in all design-related tasks.
-        Additionally, as a part of this role I have assisted the development team with all aspects of software lifecycle.
+          This role involves learning the codebase, attending design meetings,
+          writing basic code, fixing bugs, and assisting the Development Manager
+          in all design-related tasks. Additionally, as a part of this role I
+          have assisted the development team with all aspects of software
+          lifecycle.
         </ProgrammesList>
       </Section>
       <Section delay={0.2}>
@@ -196,21 +199,30 @@ const Home = () => (
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
-              >GitHub</Button>
+              >
+                GitHub
+              </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/michaeljmclain/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/michaeljmclain/"
+              target="_blank"
+            >
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoLinkedin />}
-              >LinkedIn</Button>
+              >
+                LinkedIn
+              </Button>
             </Link>
             <Link href="https://twitter.com/mhykol2k" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
-              >Twitter</Button>
+              >
+                Twitter
+              </Button>
             </Link>
           </ListItem>
         </List>

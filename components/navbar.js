@@ -122,8 +122,8 @@ const NavBar = (props) => {
                   Source
                 </MenuItem>
                 <MenuItem href="/CV.pdf" path={path}>
-                CV
-              </MenuItem>
+                  CV
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

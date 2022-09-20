@@ -7,7 +7,7 @@ import {
   List,
   ListItem,
   Divider,
-  UnorderedList
+  UnorderedList,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { Title, ProjectImage, Meta } from "../../components/project";
@@ -21,20 +21,33 @@ const Work = () => (
         Linux-Portfolio <Badge>May 2021 - June 2022</Badge>
       </Title>
       <Divider my={1}></Divider>
-      <P>Command Line Interface (CLI) Style Portfolio with an extensive list of features:</P>
+      <P>
+        Command Line Interface (CLI) Style Portfolio with an extensive list of
+        features:
+      </P>
       <UnorderedList ml={4} my={4}>
-        <ListItem><b>Pokémon</b> (Returns a random Pokémon from <b>PokéAPI v2</b>).</ListItem>
-        <ListItem><b>Quote</b> (Returns a random Quote from <b>"Quotable-API"</b>).</ListItem>
-        <ListItem><b>Projects</b> (Returns a list of all my <b>"GitHub Projects"</b>).</ListItem>
-        <ListItem><b>Sum</b> (Displays a complete <b>Summary</b>).</ListItem>
-        <ListItem><b>CV</b> (Opens my <b>CV</b>).</ListItem>
-
+        <ListItem>
+          <b>Pokémon</b> (Returns a random Pokémon from <b>PokéAPI v2</b>).
+        </ListItem>
+        <ListItem>
+          <b>Quote</b> (Returns a random Quote from <b>"Quotable-API"</b>).
+        </ListItem>
+        <ListItem>
+          <b>Projects</b> (Returns a list of all my <b>"GitHub Projects"</b>).
+        </ListItem>
+        <ListItem>
+          <b>Sum</b> (Displays a complete <b>Summary</b>).
+        </ListItem>
+        <ListItem>
+          <b>CV</b> (Opens my <b>CV</b>).
+        </ListItem>
       </UnorderedList>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Production</Meta>
           <Link href="https://www.mhykol.dev/">
-            Portfolio<ExternalLinkIcon mx="2px" />
+            Portfolio
+            <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>

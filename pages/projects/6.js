@@ -27,7 +27,6 @@ const Work = () => (
         <ListItem>Uses PHP to display provided SQL Data</ListItem>
         <ListItem>User can create or delete records.</ListItem>
         <ListItem>User can manipulate or edit records.</ListItem>
-
       </UnorderedList>
 
       <List ml={4} my={4}>
