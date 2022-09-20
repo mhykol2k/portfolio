@@ -16,17 +16,19 @@ import { Title, ProjectImage, Meta } from "../../components/project";
 import P from "../../components/paragraph";
 
 const Work = () => (
-  <Layout title="GitHub Snake">
+  <Layout title="Contribution Snake">
     <Container>
       <Title>
-        GitHub Snake <Badge>2020-2021</Badge>
+      Contribution Snake <Badge>April 2022 - May 2022</Badge>
       </Title>
       <Divider my={1}></Divider>
-      <P>GitHub Snake that eats contributions</P>
+      <P>Pulls my contribution graph and re-creates the classic snake Game we all know and love, generates a snake path where the cells get eaten in an orderly fashion.</P>
+      <br></br>
+        <P>Automatically generates a new svg each day. Which makes for great GitHub profile ReadMe.</P>
       <UnorderedList ml={4} my={4}>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
+        <ListItem>Can generate a <b>gif</b> or <b>svg</b> image.</ListItem>
+        <ListItem>Supports GitHub <b>Themes</b>.</ListItem>
+        <ListItem>Looks Awesome.</ListItem>
       </UnorderedList>
 
       <List ml={4} my={4}>
@@ -36,15 +38,11 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Download</Meta>
-          <Link href="">v0.1.1</Link>
+          <Link href="">v1.0.0</Link>
         </ListItem>
         <ListItem>
           <Meta>Last update</Meta>
-          <span>21/07/2021</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Manual</Meta>
-          <Link href="">wiki</Link>
+          <span>21/05/2021</span>
         </ListItem>
       </List>
 

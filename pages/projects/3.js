@@ -5,6 +5,9 @@ import {
   List,
   ListItem,
   Divider,
+  Center,
+  Heading,
+  UnorderedList
 } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
 import { Title, Meta } from "../../components/project";
@@ -14,13 +17,19 @@ const Work = () => (
   <Layout title="Voxel">
     <Container>
       <Title>
-        3D Voxel Portfolio <Badge>Jun 2022-</Badge>
+        3D Voxel Portfolio <Badge>June 2022 - Present</Badge>
       </Title>
       <Divider my={1}></Divider>
+      <P>This portfolio aims to showcase all of my projects in one place, to demonstrate my skills as a developer.</P>
+      <UnorderedList ml={4} my={4}>
+        <ListItem>Implemented 3D GLB Model</ListItem>
+        <ListItem>Themed App with 'light' and 'dark' mode</ListItem>
+
+      </UnorderedList>
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>P[latform</Meta>
-          <span>Web-App</span>
+          <Meta>Platform</Meta>
+          <span>Web</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
@@ -28,17 +37,18 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Download</Meta>
-          <Link href="">v0.1.12</Link>
+          <Link href="">latest-v1.0.0</Link>
         </ListItem>
         <ListItem>
           <Meta>Last update</Meta>
-          <span>17/09/22</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Manual</Meta>
-          <Link href="">wiki</Link>
+          <span>20/09/22</span>
         </ListItem>
       </List>
+
+      <Heading as="h4" fontSize={16} my={6}>
+        <Center>Media</Center>
+      </Heading>
+
     </Container>
   </Layout>
 );

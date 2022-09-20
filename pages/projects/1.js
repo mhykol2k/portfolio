@@ -16,46 +16,36 @@ import { Title, ProjectImage, Meta } from "../../components/project";
 import P from "../../components/paragraph";
 
 const Project = () => (
-  <Layout title="EPOS Application">
+  <Layout title="Epos App">
     <Container>
       <Title>
-        EPOS-BAR Application <Badge>Dec 2021 - Aug 2022</Badge>
+        Epos Application <Badge>December 2021 - August 2022</Badge>
       </Title>
       <Divider my={1}></Divider>
-      <Center my={6}>
-        <Image src="/images/projects/gr8danes_icon.png" alt="icon" />
-      </Center>
       <P>
-        EPOS Application that communicates with existing inventory management
-        system via API.
+        Complete Flutter Application that sends finished orders to an existing inventory management
+        system via REST API.
       </P>
-      <P>Currently the production version is being used in the clients bar.</P>
       <UnorderedList ml={4} my={4}>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
+        <ListItem>Flutter</ListItem>
       </UnorderedList>
 
       <List ml={4} my={4}>
         <ListItem>
-          <Meta>Platform</Meta>
+          <Meta>Platforms</Meta>
           <span>IOS, MacOS, Android, Windows, Linux</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>Flutter, SQL</span>
+          <span>Flutter, Dart, MySQL</span>
         </ListItem>
         <ListItem>
           <Meta>Download</Meta>
-          <Link href="">gr8-latest-1.1.0</Link>
+          <Link href="https://github.com/mhykol2k/gr8danes/archive/refs/heads/main.zip">latest-v1.0.0</Link>
         </ListItem>
         <ListItem>
           <Meta>Last update</Meta>
           <span>22/08/2022</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Manual</Meta>
-          <Link href="">wiki</Link>
         </ListItem>
       </List>
 

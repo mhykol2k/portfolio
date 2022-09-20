@@ -22,11 +22,12 @@ const Work = () => (
         Adavnced Databases Group Project <Badge>May 2022 - June 2022</Badge>
       </Title>
       <Divider my={1}></Divider>
-      <P>Advanced Databases and Big Data Module</P>
+      <P>Advanced Databases and Big Data University Class</P>
       <UnorderedList ml={4} my={4}>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
+        <ListItem>Uses PHP to display provided SQL Data</ListItem>
+        <ListItem>User can create or delete records.</ListItem>
+        <ListItem>User can manipulate or edit records.</ListItem>
+
       </UnorderedList>
 
       <List ml={4} my={4}>
