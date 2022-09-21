@@ -31,6 +31,7 @@ export default function HookForm() {
       <FormControl my="1" isInvalid={errors.name}>
         <FormLabel htmlFor="name">Full Name</FormLabel>
         <Input
+          autocomplete="name"
           id="name"
           placeholder="Name"
           {...register("name", {
@@ -46,6 +47,7 @@ export default function HookForm() {
       <FormControl my="1" isInvalid={errors.email}>
         <FormLabel htmlFor="email">Email Address</FormLabel>
         <Input
+          autocomplete="email"
           id="email"
           placeholder="Email Address"
           {...register("email", {
@@ -65,6 +67,7 @@ export default function HookForm() {
       <FormControl my="1" isInvalid={errors.tel}>
         <FormLabel htmlFor="tel">Phone Number</FormLabel>
         <Input
+          autocomplete="tel"
           id="tel"
           placeholder="Phone Number"
           {...register("tel", {
