@@ -59,7 +59,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Michael McLain
           </Heading>
-          <p>Flutter and C# Developer</p>
+          <p> Graduate Developer</p>
           <a href="/CV.pdf" passHref target="_blank">
             <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
               CV
@@ -96,10 +96,10 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Professional Experience
         </Heading>
-        <Dates>May 2022 - Present</Dates>
+        <Dates>June 2022 - August 2022</Dates>
         <Uni>Silver Linings Group LTD</Uni>
         <Divider my={1} />
-        <Grade>Jr. Software Engineer (Internship)</Grade>
+        <Grade>Junior Developer (Internship)</Grade>
         <Programmes>Duties:</Programmes>
         <ProgrammesList>
           This role involves learning the codebase, attending design meetings,
@@ -117,21 +117,46 @@ const Home = () => (
         <Uni>Canterbury Christ Church University</Uni>
         <Divider my={1} />
         <Grade>Bachelor of Engineering - Software Engineering</Grade>
-        <BulletPoint>
-          <li>
-            <b>Awarded First Class Honours Degree</b>
-          </li>
-        </BulletPoint>
-        <Programmes>Programmes:</Programmes>
+            <i> - Achieved First Class Honours</i> <b>(82.1%)</b>
+
+        {/* <Programmes>Programmes:</Programmes>
         <ProgrammesList>
           Data Structures, Algorithmns, Object-Oriented Programming in C#,
           Frameworks, Advanced Operating Systems and Advanced Databases.
-        </ProgrammesList>
+        </ProgrammesList> */}
 
         <Box align="center" my={3}>
           <CollapseEx />
         </Box>
       </Section>
+
+      <Section delay={0.4}>
+        <Heading as="h3" variant="section-title">
+          Summary
+        </Heading>
+        <Divider my={1} />
+        <BioSection>
+          <BioYear>2022</BioYear>
+          Graduated from University with First Class Honours (82.1%).
+        </BioSection>
+        <BioSection>
+          <BioYear>2016</BioYear>
+          Completed A-Levels.
+        </BioSection>
+        <BioSection>
+          <BioYear>2016</BioYear>
+          Completed GCSE's.
+        </BioSection>
+        <BioSection>
+          <BioYear>2004</BioYear>
+          Relocated to London, United Kingdom.
+        </BioSection>
+        <BioSection>
+          <BioYear>2000</BioYear>
+          Born in Chandler Arizona, United States.
+        </BioSection>
+      </Section>
+
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Projects
@@ -146,36 +171,6 @@ const Home = () => (
         </Box>
       </Section>
 
-      <Section delay={0.4}>
-        <Heading as="h3" variant="section-title">
-          Summary
-        </Heading>
-        <Divider my={1} />
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Internship at Silver Linings Group LTD.
-        </BioSection>
-        <BioSection>
-          <BioYear>2022</BioYear>
-          Graduated from University with First Class Honours.
-        </BioSection>
-        <BioSection>
-          <BioYear>2019</BioYear>
-          Enrolled on a Software Engineering Degree.
-        </BioSection>
-        <BioSection>
-          <BioYear>2016</BioYear>
-          Completed A-Levels.
-        </BioSection>
-        <BioSection>
-          <BioYear>2004</BioYear>
-          Relocated to London, United Kingdom.
-        </BioSection>
-        <BioSection>
-          <BioYear>2000</BioYear>
-          Born in Chandler Arizona, United States.
-        </BioSection>
-      </Section>
       <Section delay={0.5}>
         <Heading as="h3" variant="section-title">
           Interests
