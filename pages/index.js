@@ -52,14 +52,14 @@ const Home = () => (
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
       >
-        Graduate Software Engineer based in the United Kingdom
+        Software Engineer based in the United Kingdom
       </Box>
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Michael McLain
           </Heading>
-          <p> Graduate Developer</p>
+          <p>C#, React and Flutter Developer</p>
           <a href="/CV.pdf" passHref target="_blank">
             <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
               CV
@@ -96,17 +96,20 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Professional Experience
         </Heading>
-        <Dates>June 2022 - August 2022</Dates>
-        <Uni>Silver Linings Group LTD</Uni>
+        <Dates>June 2021 - Present</Dates>
+        <Uni>Great Danes / The Patio</Uni>
         <Divider my={1} />
-        <Grade>Junior Developer (Internship)</Grade>
-        <Programmes>Duties:</Programmes>
+        <Grade>Developer</Grade>
         <ProgrammesList>
-          This role involves learning the codebase, attending design meetings,
-          writing basic code, fixing bugs, and assisting the Development Manager
-          in all design-related tasks. Additionally, as a part of this role I
-          have assisted the development team with all aspects of software
-          lifecycle.
+        Involved in a variety of client projects, primarily using C#/.NET and Flutter/Dart.
+        </ProgrammesList>
+        <ProgrammesList>
+        Maintenance, Management and Upgrades to the in house EPOS System.
+        </ProgrammesList>
+        <Programmes>Duties Included:</Programmes>
+        <ProgrammesList>
+        Duties Included: Refactoring legacy code, Contributions to projects, Writing and debugging code, Troubleshooting software issues, Working closely with senior developers to improve functionality, 
+        Participating in code reviews and quality assurance activities.
         </ProgrammesList>
       </Section>
       <Section delay={0.2}>
@@ -117,13 +120,13 @@ const Home = () => (
         <Uni>Canterbury Christ Church University</Uni>
         <Divider my={1} />
         <Grade>Bachelor of Engineering - Software Engineering</Grade>
-            <i> - Achieved First Class Honours</i> <b>(82.1%)</b>
+            <i> - Achieved First Class Honours</i>
 
-        {/* <Programmes>Programmes:</Programmes>
+        <Programmes>Programmes:</Programmes>
         <ProgrammesList>
           Data Structures, Algorithmns, Object-Oriented Programming in C#,
-          Frameworks, Advanced Operating Systems and Advanced Databases.
-        </ProgrammesList> */}
+          Programming Frameworks and Languages, Advanced Operating Systems and Advanced Databases. 
+        </ProgrammesList>
 
         <Box align="center" my={3}>
           <CollapseEx />
@@ -137,7 +140,7 @@ const Home = () => (
         <Divider my={1} />
         <BioSection>
           <BioYear>2022</BioYear>
-          Graduated from University with First Class Honours (82.1%).
+          Graduated from University with First Class Honours.
         </BioSection>
         <BioSection>
           <BioYear>2016</BioYear>
