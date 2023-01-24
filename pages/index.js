@@ -59,7 +59,7 @@ const Home = () => (
           <Heading as="h2" variant="page-title">
             Michael McLain
           </Heading>
-          <p>C#, React and Flutter Developer</p>
+          <p>Full-Stack Developer</p>
           <a href="/CV.pdf" passHref target="_blank">
             <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
               CV
@@ -96,10 +96,10 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Professional Experience
         </Heading>
-        <Dates>June 2021 - Present</Dates>
-        <Uni>Great Danes / The Patio</Uni>
+        <Dates>December 2022 - Present</Dates>
+        <Uni>TECNIQ</Uni>
         <Divider my={1} />
-        <Grade>Developer</Grade>
+        <Grade>Software Developer</Grade>
         <ProgrammesList>
         Involved in a variety of client projects, primarily using C#/.NET and Flutter/Dart.
         </ProgrammesList>
