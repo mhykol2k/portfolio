@@ -94,22 +94,16 @@ const Home = () => (
       </Box>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Professional Experience
+        Experience
         </Heading>
         <Dates>December 2022 - Present</Dates>
-        <Uni>TECNIQ</Uni>
+        <Uni as="h1">TECNIQ</Uni>
         <Divider my={1} />
         <Grade>Software Developer</Grade>
         <ProgrammesList>
-        Involved in a variety of client projects, primarily using C#/.NET and Flutter/Dart.
-        </ProgrammesList>
-        <ProgrammesList>
-        Maintenance, Management and Upgrades to the in house EPOS System.
-        </ProgrammesList>
-        <Programmes>Duties Included:</Programmes>
-        <ProgrammesList>
-        Duties Included: Refactoring legacy code, Contributions to projects, Writing and debugging code, Troubleshooting software issues, Working closely with senior developers to improve functionality, 
-        Participating in code reviews and quality assurance activities.
+        Currently I am leading the development of TECNIQ's proprietary inventory control system to introduce traceability into the company.
+
+Utilising technical proficiency and project management experience to bring innovative ideas to life. Focused on staying ahead of industry trends to provide exceptional results for the company, and I'm very excited to have joined a company that aligns with my personal interests and ambitions.
         </ProgrammesList>
       </Section>
       <Section delay={0.2}>
