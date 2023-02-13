@@ -5,8 +5,10 @@ import {
   Divider,
   useDisclosure,
   Box,
+  Badge,
 } from "@chakra-ui/react";
 import { Dates, Programmes, ProgrammesList, Uni } from "../components/bio";
+import { Meta } from "../components/project";
 
 function CollapseEx() {
   const { isOpen, onToggle } = useDisclosure();
@@ -26,21 +28,22 @@ function CollapseEx() {
           bg="useColorModeValue"
           rounded="md"
         >
-          <Dates>Sept 2017 - June 2019</Dates>
-          <Uni>Tendring Technology College Sxith Form</Uni>
+          <Badge float="right">July 2021 - Dec 2022</Badge>
+          <Uni>Great Danes / The Patio</Uni>
+          <Programmes>Software Developer</Programmes>
           <Divider my={1} />
-          <Programmes>A-Level Subjects:</Programmes>
           <ProgrammesList>
-            Mathematics, Computer Science, Information Technology, Psychology.
+          Proud to have served as a software developer for a Great Danes, where I developed a custom EPOS system to streamline operations and boost efficiency. Committed to staying ahead of industry advancements and delivering outstanding results.
           </ProgrammesList>
-          <br></br>
-          <Dates>Sept 2011 - June 2017</Dates>
-          <Uni>Tendring Technology College</Uni>
+          <Meta>Stack</Meta>
+          <span>Flutter, Dart, MySQL, GoLang</span>
+          <Divider my={5} />
+          <Badge float="right">June 2018 - June 2019</Badge>
+          <Uni>East of England Co-Op</Uni>
+          <Programmes>Supermarket Associate</Programmes>
           <Divider my={1} />
-          <Programmes>GCSE Subjects:</Programmes>
           <ProgrammesList>
-            Computer Science, Mathematics, Information Technology, English,
-            French.
+          Began my career as a supermarket associate, where I honed my skills in customer service and teamwork, and gained valuable experience in fast-paced environments. Committed to continuously learning and growing in my career.
           </ProgrammesList>
         </Box>
       </Collapse>

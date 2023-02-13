@@ -21,6 +21,11 @@ export const Dates = styled.span`
   float: right;
 `;
 
+export const Badge = styled.span`
+  font-style: italic;
+  float: right;
+`;
+
 export const Programmes = styled.p`
   font-size: 15px;
 `;

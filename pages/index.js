@@ -11,9 +11,11 @@ import {
   useColorModeValue,
   Collapse,
   chakra,
+  
 } from "@chakra-ui/react";
 import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
+import { Meta } from "/components/project";
 import {
   BioSection,
   BioYear,
@@ -26,7 +28,7 @@ import {
 import Grade from "../components/grade";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import { GridItem } from "@chakra-ui/react";
+import { GridItem, Badge } from "@chakra-ui/react";
 import {
   IoLogoTwitter,
   IoLogoInstagram,
@@ -44,7 +46,7 @@ const ProfileImage = chakra(Image, {
 const Home = () => (
   <Layout>
     <Container>
-      <Box
+      {/* <Box
         borderRadius="lg"
         mb={6}
         p={3}
@@ -52,19 +54,19 @@ const Home = () => (
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
       >
-        Software Engineer based in the United Kingdom
-      </Box>
+        Currently working for TECNIQ
+      </Box> */}
       <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Michael McLain
           </Heading>
-          <p>Full-Stack Developer</p>
-          <a href="/CV.pdf" passHref target="_blank">
+          <p>Software Developer</p>
+          {/* <a href="/CV.pdf" passHref target="_blank">
             <Button rightIcon={<ExternalLinkIcon />} colorScheme="teal">
               CV
             </Button>
-          </a>
+          </a> */}
         </Box>
         <Box
           flexShrink={0}
@@ -94,55 +96,48 @@ const Home = () => (
       </Box>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-        Experience
+        Education
         </Heading>
-        <Dates>December 2022 - Present</Dates>
-        <Uni as="h1">TECNIQ</Uni>
+        <Badge float="right">Sept 2019 - June 2022</Badge>
+        <Uni as="h1">Canterbury Christ Church University</Uni>
         <Divider my={1} />
+        <Grade> - BEng - Software Engineering</Grade>
+        <i> - Graduated With First Class Honours</i>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Experience
+        </Heading>
+        <Badge float="right">Dec 2022 - Present</Badge>
+        <Uni>TECNIQ / ADP Special Products</Uni>
         <Grade>Software Developer</Grade>
-        <ProgrammesList>
+        <Divider my={1} />
+            <ProgrammesList>
         Currently I am leading the development of TECNIQ's proprietary inventory control system to introduce traceability into the company.
 
 Utilising technical proficiency and project management experience to bring innovative ideas to life. Focused on staying ahead of industry trends to provide exceptional results for the company, and I'm very excited to have joined a company that aligns with my personal interests and ambitions.
         </ProgrammesList>
-      </Section>
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Education
-        </Heading>
-        <Dates>Sept 2019 - June 2022</Dates>
-        <Uni>Canterbury Christ Church University</Uni>
-        <Divider my={1} />
-        <Grade>Bachelor of Engineering - Software Engineering</Grade>
-            <i> - Achieved First Class Honours</i>
-
-        <Programmes>Programmes:</Programmes>
-        <ProgrammesList>
-          Data Structures, Algorithmns, Object-Oriented Programming in C#,
-          Programming Frameworks and Languages, Advanced Operating Systems and Advanced Databases. 
-        </ProgrammesList>
+        <Meta>Stack</Meta>
+          <span>C#, ASP.NET, MySQL</span>
 
         <Box align="center" my={3}>
           <CollapseEx />
         </Box>
       </Section>
+      <Divider my={5}/>
 
-      <Section delay={0.4}>
+      {/* <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
           Summary
         </Heading>
         <Divider my={1} />
         <BioSection>
+          <BioYear>2023</BioYear>
+          Started working at TECNIQ / ADP Special Products
+        </BioSection>
+        <BioSection>
           <BioYear>2022</BioYear>
           Graduated from University with First Class Honours.
-        </BioSection>
-        <BioSection>
-          <BioYear>2016</BioYear>
-          Completed A-Levels.
-        </BioSection>
-        <BioSection>
-          <BioYear>2016</BioYear>
-          Completed GCSE's.
         </BioSection>
         <BioSection>
           <BioYear>2004</BioYear>
@@ -152,17 +147,16 @@ Utilising technical proficiency and project management experience to bring innov
           <BioYear>2000</BioYear>
           Born in Chandler Arizona, United States.
         </BioSection>
-      </Section>
+      </Section> */}
 
-      <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
+        <Section delay={0.3}>
+        {/* <Heading as="h3" variant="section-title">
           Projects
-        </Heading>
-        <Divider my={1} />
+        </Heading> */}
         <Box align="center" my={2}>
           <Nextlink href="/projects" passHref scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Projects
+              View My Projects
             </Button>
           </Nextlink>
         </Box>
@@ -174,11 +168,12 @@ Utilising technical proficiency and project management experience to bring innov
         </Heading>
         <Divider my={1} />
         <Paragraph>
-          Even outside of work, I spend much of my time working on building
-          computers and developing personal applications. When not programming,
+          Outside of work, I spend much of my personal time working on building
+          computers and developing applications. When I am not programming,
           I enjoy running and staying active outdoors.
         </Paragraph>
       </Section>
+
       <Section delay={0.6}>
         <Divider my={1} />
         <List align="center">
@@ -202,15 +197,6 @@ Utilising technical proficiency and project management experience to bring innov
                 leftIcon={<IoLogoLinkedin />}
               >
                 LinkedIn
-              </Button>
-            </Link>
-            <Link href="https://twitter.com/mhykol2k" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                Twitter
               </Button>
             </Link>
           </ListItem>
