@@ -1,4 +1,7 @@
 import {
+  Uni,
+} from "../../components/bio";
+import {
   Container,
   Badge,
   Link,
@@ -18,50 +21,57 @@ const Work = () => (
   <Layout title="Portfolio">
     <Container>
       <Title>
-        Linux-Portfolio <Badge>May 2021 - June 2022</Badge>
+        CLI Portfolio <Badge>December 2021 - December 2022</Badge>
       </Title>
+      <Uni>Summary</Uni>
       <Divider my={1}></Divider>
-      <P>
-        Command Line Interface (CLI) Style Portfolio with an extensive list of
-        features:
+      <P>I recently built a Linux CLI (Command Line Interface) style portfolio website using TypeScript. This portfolio website provides a unique and interactive way for users to interact with and learn about my skills and experience.
       </P>
-      <UnorderedList ml={4} my={4}>
+      <Divider my={1}/>
+      <P>
+      I chose to build the website using TypeScript, a popular programming language that adds static typing to JavaScript. This allowed me to create a more reliable and scalable web application.
+      </P>
+      <Divider my={1}/>
+      <Uni>Purpose</Uni>
+      <P>The portfolio website is designed to resemble a Linux terminal, with a command prompt that allows users to interact with the website using commands.
+        Users can navigate to different sections of the website by typing in specific commands, such as projects, skills, experience, and education.
+      </P>
+      <Divider my={1}/>
+      <Uni>Benefits</Uni>
+      <P>I included features such as auto-completion and history commands to make it easier for users to navigate and interact with the website. Additionally, the website provides a help command that lists all the available commands and their corresponding functions.
+      <Divider my={1} />
+      </P>
+      <Uni>Final Comments</Uni>
+      <P>Overall, my Linux CLI style portfolio made with TypeScript provides an immersive and memorable experience for users. Its unique design and interactive features set it apart from traditional portfolio websites and showcase my skills and experience in a new and exciting way.
+      </P>
+      <List my={4}>
         <ListItem>
-          <b>Pokémon</b> (Returns a random Pokémon from <b>PokéAPI v2</b>).
+          <Meta>Platforms</Meta>
+          <span>Web.</span>
         </ListItem>
         <ListItem>
-          <b>Quote</b> (Returns a random Quote from <b>"Quotable-API"</b>).
+          <Meta>Stack</Meta>
+          <span>TypeScript</span>
         </ListItem>
-        <ListItem>
-          <b>Projects</b> (Returns a list of all my <b>"GitHub Projects"</b>).
-        </ListItem>
-        <ListItem>
-          <b>Sum</b> (Displays a complete <b>Summary</b>).
-        </ListItem>
-        <ListItem>
-          <b>CV</b> (Opens my <b>CV</b>).
-        </ListItem>
-      </UnorderedList>
-      <List ml={4} my={4}>
         <ListItem>
           <Meta>Production</Meta>
           <Link href="https://www.mhykol.dev/">
-            Portfolio
+            Click Here
             <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
-          <Meta>Stack</Meta>
-          <span>TypeScript, JavaScript, CSS, Prettier</span>
+          <Meta>Last update</Meta>
+          <span>12/06/2022</span>
         </ListItem>
       </List>
 
-      <Heading as="h4" fontSize={16} my={6}>
+      {/* <Heading as="h4" fontSize={16} my={6}>
         <Center>Media</Center>
       </Heading>
 
       <ProjectImage src="/images/projects/image_04.png" alt="image" />
-      <ProjectImage src="/images/projects/image_05.png" alt="image" />
+      <ProjectImage src="/images/projects/image_05.png" alt="image" /> */}
     </Container>
   </Layout>
 );

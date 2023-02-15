@@ -7,6 +7,7 @@ import {
   Box,
   Badge,
 } from "@chakra-ui/react";
+import Grade from "../components/grade";
 import { Dates, Programmes, ProgrammesList, Uni } from "../components/bio";
 import { Meta } from "../components/project";
 

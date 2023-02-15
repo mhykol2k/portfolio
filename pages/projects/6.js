@@ -1,3 +1,4 @@
+import { Uni } from "../../components/bio"
 import {
   Container,
   Badge,
@@ -16,39 +17,44 @@ import { Title, ProjectImage, Meta } from "../../components/project";
 import P from "../../components/paragraph";
 
 const Work = () => (
-  <Layout title="ADB Group">
+  <Layout title="Database Project">
     <Container>
       <Title>
-        Adavnced Databases Group Project <Badge>May 2022 - June 2022</Badge>
+        Database Project <Badge>May 2022 - June 2022</Badge>
       </Title>
+      <Uni>Summary</Uni>
       <Divider my={1}></Divider>
-      <P>Advanced Databases and Big Data University Class</P>
-      <UnorderedList ml={4} my={4}>
-        <ListItem>Uses PHP to display provided SQL Data</ListItem>
-        <ListItem>User can create or delete records.</ListItem>
-        <ListItem>User can manipulate or edit records.</ListItem>
-      </UnorderedList>
+      <P>The project was designed to demonstrate proficiency in PHP and SQL, specifically the ability to read from and write to a database, as well as edit and update information within the database.
+        The project was developed in a group environment, using Git and GitHub for version control and collaboration.
+      </P>
+      <Divider my={1}/>
+      <Uni>Purpose</Uni>
+      <P>The project involved creating a user interface, which allowed users to perform CRUD operations (Create, Read, Update, Delete) on a database. The system was designed to store and retrieve data in a relational database, using SQL queries to manipulate the data.
+        The user interface was built using PHP and HTML, and it provided an intuitive way for users to interact with the data, allowing them to view, edit, and delete records.
+      </P>
+      <Divider my={1}/>
+      <Uni>Final Comments</Uni>
+      <P>The project showcased our ability to design and implement a database management system using PHP and SQL. It also demonstrated our ability to create a user-friendly web interface and our proficiency in using Git and GitHub for version control and collaboration. Overall, the project provided a valuable learning experience in developing web applications using PHP and SQL, as well as working collaboratively as a team using modern development practices.
+      </P>
 
-      <List ml={4} my={4}>
+      <List my={4}>
         <ListItem>
-          <Meta>Platform</Meta>
-          <span>Web</span>
+          <Meta>Platforms</Meta>
+          <span>Web.</span>
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>PHP, JavaScript, CSS</span>
+          <span>PHP, HTML, CSS & JavaScript</span>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <Meta>Download</Meta>
-          <Link href="">v0.1.1</Link>
-        </ListItem>
+          <Link href="https://github.com/mhykol2k/gr8danes/archive/refs/heads/main.zip">
+            latest-v2.1
+          </Link>
+        </ListItem> */}
         <ListItem>
           <Meta>Last update</Meta>
-          <span>21/07/2021</span>
-        </ListItem>
-        <ListItem>
-          <Meta>Manual</Meta>
-          <Link href="">wiki</Link>
+          <span>30/06/2022</span>
         </ListItem>
       </List>
 
