@@ -11,7 +11,6 @@ import {
   useColorModeValue,
   Collapse,
   chakra,
-  
 } from "@chakra-ui/react";
 import { ChevronRightIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
@@ -96,7 +95,7 @@ const Home = () => (
       </Box>
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-        Education
+          Education
         </Heading>
         <Badge float="right">Sept 2019 - June 2022</Badge>
         <Uni as="h1">Canterbury Christ Church University</Uni>
@@ -112,19 +111,23 @@ const Home = () => (
         <Uni>TECNIQ / ADP Special Products</Uni>
         <Grade>Software Developer</Grade>
         <Divider my={1} />
-            <ProgrammesList>
-        Currently I am leading the development of TECNIQ's proprietary inventory control system to introduce traceability into the company.
-
-Utilising technical proficiency and project management experience to bring innovative ideas to life. Focused on staying ahead of industry trends to provide exceptional results for the company, and I'm very excited to have joined a company that aligns with my personal interests and ambitions.
+        <ProgrammesList>
+          Currently I am leading the development of TECNIQ's proprietary
+          inventory control system to introduce traceability into the company.
+          Utilising technical proficiency and project management experience to
+          bring innovative ideas to life. Focused on staying ahead of industry
+          trends to provide exceptional results for the company, and I'm very
+          excited to have joined a company that aligns with my personal
+          interests and ambitions.
         </ProgrammesList>
         <Meta>Stack</Meta>
-          <span>C#, ASP.NET, MySQL</span>
+        <span>C#, ASP.NET, MySQL</span>
 
         <Box align="center" my={3}>
           <CollapseEx />
         </Box>
       </Section>
-      <Divider my={5}/>
+      <Divider my={5} />
 
       {/* <Section delay={0.4}>
         <Heading as="h3" variant="section-title">
@@ -149,7 +152,7 @@ Utilising technical proficiency and project management experience to bring innov
         </BioSection>
       </Section> */}
 
-        <Section delay={0.3}>
+      <Section delay={0.3}>
         {/* <Heading as="h3" variant="section-title">
           Projects
         </Heading> */}
@@ -169,8 +172,8 @@ Utilising technical proficiency and project management experience to bring innov
         <Divider my={1} />
         <Paragraph>
           Outside of work, I spend much of my personal time working on building
-          computers and developing applications. When I am not programming,
-          I enjoy running and staying active outdoors.
+          computers and developing applications. When I am not programming, I
+          enjoy running and staying active outdoors.
         </Paragraph>
       </Section>
 

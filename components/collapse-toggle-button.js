@@ -34,7 +34,10 @@ function CollapseEx() {
           <Grade>Software Developer</Grade>
           <Divider my={1} />
           <ProgrammesList>
-          Proud to have served as a software developer for a Great Danes, where I developed a custom EPOS system to streamline operations and boost efficiency. Committed to staying ahead of industry advancements and delivering outstanding results.
+            Proud to have served as a software developer for a Great Danes,
+            where I developed a custom EPOS system to streamline operations and
+            boost efficiency. Committed to staying ahead of industry
+            advancements and delivering outstanding results.
           </ProgrammesList>
           <Meta>Stack</Meta>
           <span>Flutter, Dart, MySQL, GoLang</span>
@@ -44,7 +47,10 @@ function CollapseEx() {
           <Grade>Supermarket Associate</Grade>
           <Divider my={1} />
           <ProgrammesList>
-          Began my career as a supermarket associate, where I honed my skills in customer service and teamwork, and gained valuable experience in fast-paced environments. Committed to continuously learning and growing in my career.
+            Began my career as a supermarket associate, where I honed my skills
+            in customer service and teamwork, and gained valuable experience in
+            fast-paced environments. Committed to continuously learning and
+            growing in my career.
           </ProgrammesList>
         </Box>
       </Collapse>

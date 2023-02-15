@@ -1,4 +1,4 @@
-import { Uni } from "../../components/bio"
+import { Uni } from "../../components/bio";
 import {
   Container,
   Badge,
@@ -24,21 +24,39 @@ const Work = () => (
       </Title>
       <Uni>Summary</Uni>
       <Divider my={1}></Divider>
-      <P> GitHub Snake game is a fun and creative way to gamify GitHub contributions. The game is built using Python and utilizes GitHub's REST API to retrieve a user's contribution data.
+      <P>
+        {" "}
+        GitHub Snake game is a fun and creative way to gamify GitHub
+        contributions. The game is built using Python and utilizes GitHub's REST
+        API to retrieve a user's contribution data.
       </P>
-      <Divider my={1}/>
+      <Divider my={1} />
       <Uni>Purpose</Uni>
-      <P>The game generates a snake that moves along a visual representation of the user's contribution grid, with each square on the grid representing a day. The snake's length increases as the user makes more contributions, and the game is customizable, allowing users to change the snake's appearance and behavior.
+      <P>
+        The game generates a snake that moves along a visual representation of
+        the user's contribution grid, with each square on the grid representing
+        a day. The snake's length increases as the user makes more
+        contributions, and the game is customizable, allowing users to change
+        the snake's appearance and behavior.
       </P>
-      <Divider my={1}/>
+      <Divider my={1} />
       <Uni>Benefits</Uni>
-      <P>The game is open-source and can be easily installed and run locally on a user's machine. It can also be run as a GitHub Action, allowing users to generate a Snake game animation that can be displayed on their GitHub profile.
+      <P>
+        The game is open-source and can be easily installed and run locally on a
+        user's machine. It can also be run as a GitHub Action, allowing users to
+        generate a Snake game animation that can be displayed on their GitHub
+        profile.
       </P>
       <Divider my={1} />
       <Uni>Final Comments</Uni>
-      <P>GitHub Snake game is a creative and engaging way to incentivize and visualize GitHub contributions.
-        The use of GitHub's REST API provides a valuable way to access and utilize GitHub data, and the game's customization options make it a fun and personalized experience for users.
-        The game is a great example of the power and versatility of Python and can serve as a valuable learning tool for developers interested in game development and data visualization.
+      <P>
+        GitHub Snake game is a creative and engaging way to incentivize and
+        visualize GitHub contributions. The use of GitHub's REST API provides a
+        valuable way to access and utilize GitHub data, and the game's
+        customization options make it a fun and personalized experience for
+        users. The game is a great example of the power and versatility of
+        Python and can serve as a valuable learning tool for developers
+        interested in game development and data visualization.
       </P>
 
       <List my={4}>

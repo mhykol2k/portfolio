@@ -1,4 +1,4 @@
-import { Uni } from "../../components/bio"
+import { Uni } from "../../components/bio";
 import {
   Container,
   Badge,
@@ -24,17 +24,34 @@ const Work = () => (
       </Title>
       <Uni>Summary</Uni>
       <Divider my={1}></Divider>
-      <P>The project was designed to demonstrate proficiency in PHP and SQL, specifically the ability to read from and write to a database, as well as edit and update information within the database.
-        The project was developed in a group environment, using Git and GitHub for version control and collaboration.
+      <P>
+        The project was designed to demonstrate proficiency in PHP and SQL,
+        specifically the ability to read from and write to a database, as well
+        as edit and update information within the database. The project was
+        developed in a group environment, using Git and GitHub for version
+        control and collaboration.
       </P>
-      <Divider my={1}/>
+      <Divider my={1} />
       <Uni>Purpose</Uni>
-      <P>The project involved creating a user interface, which allowed users to perform CRUD operations (Create, Read, Update, Delete) on a database. The system was designed to store and retrieve data in a relational database, using SQL queries to manipulate the data.
-        The user interface was built using PHP and HTML, and it provided an intuitive way for users to interact with the data, allowing them to view, edit, and delete records.
+      <P>
+        The project involved creating a user interface, which allowed users to
+        perform CRUD operations (Create, Read, Update, Delete) on a database.
+        The system was designed to store and retrieve data in a relational
+        database, using SQL queries to manipulate the data. The user interface
+        was built using PHP and HTML, and it provided an intuitive way for users
+        to interact with the data, allowing them to view, edit, and delete
+        records.
       </P>
-      <Divider my={1}/>
+      <Divider my={1} />
       <Uni>Final Comments</Uni>
-      <P>The project showcased our ability to design and implement a database management system using PHP and SQL. It also demonstrated our ability to create a user-friendly web interface and our proficiency in using Git and GitHub for version control and collaboration. Overall, the project provided a valuable learning experience in developing web applications using PHP and SQL, as well as working collaboratively as a team using modern development practices.
+      <P>
+        The project showcased our ability to design and implement a database
+        management system using PHP and SQL. It also demonstrated our ability to
+        create a user-friendly web interface and our proficiency in using Git
+        and GitHub for version control and collaboration. Overall, the project
+        provided a valuable learning experience in developing web applications
+        using PHP and SQL, as well as working collaboratively as a team using
+        modern development practices.
       </P>
 
       <List my={4}>
