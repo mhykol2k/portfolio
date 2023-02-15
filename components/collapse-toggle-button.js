@@ -30,7 +30,7 @@ function CollapseEx() {
         >
           <Badge float="right">July 2021 - Dec 2022</Badge>
           <Uni>Great Danes / The Patio</Uni>
-          <Programmes>Software Developer</Programmes>
+          <Grade>Software Developer</Grade>
           <Divider my={1} />
           <ProgrammesList>
           Proud to have served as a software developer for a Great Danes, where I developed a custom EPOS system to streamline operations and boost efficiency. Committed to staying ahead of industry advancements and delivering outstanding results.
@@ -40,7 +40,7 @@ function CollapseEx() {
           <Divider my={5} />
           <Badge float="right">June 2018 - June 2019</Badge>
           <Uni>East of England Co-Op</Uni>
-          <Programmes>Supermarket Associate</Programmes>
+          <Grade>Supermarket Associate</Grade>
           <Divider my={1} />
           <ProgrammesList>
           Began my career as a supermarket associate, where I honed my skills in customer service and teamwork, and gained valuable experience in fast-paced environments. Committed to continuously learning and growing in my career.
