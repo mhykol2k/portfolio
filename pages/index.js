@@ -121,7 +121,7 @@ const Home = () => (
           interests and ambitions.
         </ProgrammesList>
         <Meta>Stack</Meta>
-        <span>C#, ASP.NET, MySQL</span>
+        <span>C#, ASP.NET, Neo4j</span>
 
         <Box align="center" my={3}>
           <CollapseEx />
