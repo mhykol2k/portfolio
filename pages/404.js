@@ -19,13 +19,13 @@ const NotFound = () => {
         We lost this page!
       </Heading>
       <Text align="center">
-        We searched high and low but couldn't find what you're looking for. Let's find a better place for you to go
+        We searched high and low but couldn't find what you're looking for. Let's find a better place for you to go.
       </Text>
       <Divider my={6} />
       <Box my={6} align="center">
         <NextLink href="/" passHref>
           <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-            Return Home
+            Home
           </Button>
         </NextLink>
       </Box>
