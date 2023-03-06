@@ -12,11 +12,14 @@ import { ChevronRightIcon } from "@chakra-ui/icons";
 const NotFound = () => {
   return (
     <Container>
+      <Heading align="center" as="h4">
+        (404)
+      </Heading>
       <Heading align="center" as="h1">
-        You appear to be lost!
+        We lost this page!
       </Heading>
       <Text align="center">
-        The page you&apos;re looking for was not found.
+        We searched high and low but couldn't find what you're looking for. Let's find a better place for you to go
       </Text>
       <Divider my={6} />
       <Box my={6} align="center">
