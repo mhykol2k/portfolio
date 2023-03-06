@@ -100,7 +100,7 @@ const Home = () => (
         <Badge float="right">Sept 2019 - June 2022</Badge>
         <Uni as="h1">Canterbury Christ Church University</Uni>
         <Divider my={1} />
-        <Grade> - BEng - Software Engineering</Grade>
+        <Grade> - Bachelor of Engineering (BEng), Software Engineering</Grade>
         <i> - Graduated With First Class Honours</i>
       </Section>
       <Section delay={0.2}>
