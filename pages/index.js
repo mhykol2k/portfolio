@@ -109,7 +109,7 @@ const Home = () => (
         </Heading>
         <Badge float="right">Dec 2022 - Present</Badge>
         <Uni>TECNIQ / ADP Special Products</Uni>
-        <Grade>Software Developer</Grade>
+        <Grade>Lead Software Developer</Grade>
         <Divider my={1} />
         <ProgrammesList>
           Currently I am leading the development of TECNIQ's proprietary
