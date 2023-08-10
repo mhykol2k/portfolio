@@ -108,8 +108,8 @@ const Home = () => (
           Experience
         </Heading>
         <Badge float="right">Dec 2022 - Present</Badge>
-        <Uni>TECNIQ / ADP Special Products</Uni>
-        <Grade>Lead Software Developer</Grade>
+        <Uni>TECNIQ</Uni>
+        <Grade>Software Developer</Grade>
         <Divider my={1} />
         <ProgrammesList>
           Currently I am leading the development of TECNIQ's proprietary
@@ -121,7 +121,7 @@ const Home = () => (
           interests and ambitions.
         </ProgrammesList>
         <Meta>Stack</Meta>
-        <span>C#, ASP.NET, Neo4j</span>
+        <span>C#, ASP.NET, SQL</span>
 
         <Box align="center" my={3}>
           <CollapseEx />

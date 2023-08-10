@@ -21,7 +21,7 @@ function CollapseEx() {
         icon={isOpen ? <TriangleUpIcon /> : <TriangleDownIcon />}
         onClick={onToggle}
       ></IconButton>
-      <Collapse in={isOpen} animateOpacity transition={{ duration: 1 }}>
+      <Collapse in={isOpen} animateOpacity transition={{ duration: 4 }}>
         <Box
           align="left"
           color="useColorModeValue"
