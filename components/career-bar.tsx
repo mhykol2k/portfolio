@@ -1,11 +1,11 @@
-import { companies, careerStart, monthIndex, nowYM, roleSpan, ym } from "@/lib/experience";
+import { companies, monthIndex, nowYM, roleSpan, ym } from "@/lib/experience";
 
 /**
  * Proportional timeline of every role, oldest on the left, with year ticks.
  * Server component: `now` is passed in so the page revalidates cleanly.
  */
 export function CareerBar({ now = nowYM() }: { now?: string }) {
-  const start = careerStart();
+  const start = companies.flatMap((c) => c.roles.map((r) => r.start)).sort()[0];
   const startIdx = monthIndex(start);
   const endIdx = monthIndex(now) + 1;
   const total = endIdx - startIdx;

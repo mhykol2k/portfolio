@@ -22,6 +22,15 @@ export function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
       <p className="mt-1.5 text-sm leading-relaxed text-muted">{project.summary}</p>
+      {project.metric && (
+        <p className="mt-3 text-sm">
+          {project.metric.before && (
+            <span className="mr-1.5 text-faint line-through decoration-1">{project.metric.before}</span>
+          )}
+          <span className="font-semibold text-fg">{project.metric.after}</span>
+          <span className="ml-1.5 text-muted">{project.metric.label}</span>
+        </p>
+      )}
       <ul className="mt-3 flex flex-wrap gap-1.5">
         {project.stack.slice(0, 4).map((s) => (
           <li

@@ -1,13 +1,4 @@
-import {
-  companies,
-  companySpan,
-  education,
-  formatDuration,
-  formatYM,
-  monthsBetween,
-  nowYM,
-  roleSpan,
-} from "@/lib/experience";
+import { companies, companySpan, nowYM, roleSpan } from "@/lib/experience";
 import { CareerBar } from "./career-bar";
 
 export function Experience({ now = nowYM() }: { now?: string }) {
@@ -47,34 +38,59 @@ export function Experience({ now = nowYM() }: { now?: string }) {
                           rs.current ? "bg-accent ring-4 ring-accent/20" : "bg-faint"
                         }`}
                       />
-                      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                        <h4 className="font-medium tracking-tight">{r.title}</h4>
-                        <span
-                          className={`rounded-md border px-2 py-0.5 font-mono text-[11px] ${
-                            rs.current
-                              ? "border-accent/50 bg-accent-soft text-fg"
-                              : "border-line text-muted"
-                          }`}
-                        >
-                          {rs.duration}
-                        </span>
-                      </div>
-                      <p className="mt-0.5 font-mono text-xs text-faint">{rs.label}</p>
-                      <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
-                        {r.points.map((pt) => (
-                          <li key={pt} className="flex gap-2.5">
-                            <span aria-hidden className="mt-[0.6em] h-1 w-1 shrink-0 rounded-full bg-faint" />
-                            <span>{pt}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <ul className="mt-3 flex flex-wrap gap-1.5">
-                        {r.stack.map((s) => (
-                          <li key={s} className="rounded-md border border-line px-2 py-0.5 text-[11px] text-muted">
-                            {s}
-                          </li>
-                        ))}
-                      </ul>
+                      <details className="group">
+                        <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                            <h4 className="font-medium tracking-tight transition group-hover:text-accent">
+                              {r.title}
+                            </h4>
+                            <span className="flex items-center gap-2">
+                              <span
+                                className={`rounded-md border px-2 py-0.5 font-mono text-[11px] ${
+                                  rs.current
+                                    ? "border-accent/50 bg-accent-soft text-fg"
+                                    : "border-line text-muted"
+                                }`}
+                              >
+                                {rs.duration}
+                              </span>
+                              <svg
+                                aria-hidden
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="text-faint transition-transform group-open:rotate-180"
+                              >
+                                <path d="m6 9 6 6 6-6" />
+                              </svg>
+                            </span>
+                          </div>
+                          <p className="mt-0.5 font-mono text-xs text-faint">
+                            {rs.label}
+                            <span className="ml-2 text-faint/70 group-open:hidden">· {r.points.length} highlights</span>
+                          </p>
+                        </summary>
+                        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted">
+                          {r.points.map((pt) => (
+                            <li key={pt} className="flex gap-2.5">
+                              <span aria-hidden className="mt-[0.6em] h-1 w-1 shrink-0 rounded-full bg-faint" />
+                              <span>{pt}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <ul className="mt-3 flex flex-wrap gap-1.5">
+                          {r.stack.map((st) => (
+                            <li key={st} className="rounded-md border border-line px-2 py-0.5 text-[11px] text-muted">
+                              {st}
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
                     </li>
                   );
                 })}
@@ -83,22 +99,6 @@ export function Experience({ now = nowYM() }: { now?: string }) {
           );
         })}
 
-        {/* Education */}
-        <li>
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-            <h3 className="text-lg font-semibold tracking-tight">{education.school}</h3>
-            <p className="font-mono text-xs text-muted">
-              {formatYM(education.start)} – {formatYM(education.end)}
-              <span className="mx-1.5 text-faint">·</span>
-              {formatDuration(monthsBetween(education.start, education.end))}
-            </p>
-          </div>
-          <p className="mt-1 text-sm text-muted">
-            {education.degree}
-            <span className="mx-1.5 text-faint">·</span>
-            {education.grade}
-          </p>
-        </li>
       </ol>
     </div>
   );

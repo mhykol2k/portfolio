@@ -6,6 +6,8 @@ export type Project = {
   period: string;
   status: "Live" | "In beta" | "In development";
   stack: string[];
+  /** One headline number for the card, e.g. { before: "4 h", after: "30 min", label: "per car" } */
+  metric?: { before?: string; after: string; label: string };
   problem: string;
   approach: string[];
   outcome: string;
@@ -22,6 +24,7 @@ export const projects: Project[] = [
     period: "2025 – 2026",
     status: "Live",
     stack: ["Next.js 14", "TypeScript", "Supabase", "PDF generation", "Vercel"],
+    metric: { before: "4 h", after: "30 min", label: "quote time per car" },
     problem:
       "Each vehicle on the programme arrives with a customer specification pack listing hundreds of parts and options. Quoting it by hand meant cross-referencing several versioned spreadsheets, applying standards that differ part by part, and re-keying everything into a document. It took hours per car and errors were only caught downstream.",
     approach: [
@@ -31,7 +34,7 @@ export const projects: Project[] = [
       "Generates a branded PDF quotation and keeps a full audit trail per job.",
     ],
     outcome:
-      "Quotes that took a working day now take minutes, with the review effort concentrated on the handful of lines the engine is unsure about. Pricing rules live in one place instead of in people's heads.",
+      "A car that took 4 hours to quote now takes 30 minutes, with review effort concentrated on the handful of lines the engine flags. 30 to 40 people across commercial and engineering use it. Pricing rules live in one place instead of in people's heads.",
     notes:
       "Customer, part and pricing data are confidential and not shown here.",
   },
@@ -44,6 +47,7 @@ export const projects: Project[] = [
     period: "2026",
     status: "In beta",
     stack: ["Next.js", "TypeScript", "Supabase", "3D geometry analysis"],
+    metric: { after: "30–40", label: "daily users" },
     problem:
       "Estimating a new carbon, machined, printed or fabricated part relied on experience and a few reference jobs. Similar parts were priced inconsistently, and a loss-making quote only became visible after the work was done.",
     approach: [
@@ -53,7 +57,7 @@ export const projects: Project[] = [
       "Shows cost, sale price and margin side by side before anything is sent, and gates firm quotes behind approval.",
     ],
     outcome:
-      "Anyone in the business can produce a consistent first-pass estimate, and the commercial team sees margin before quoting rather than after. Being redesigned from an internal tool into something that reads as a finished product.",
+      "Anyone in the business can produce a consistent first-pass estimate, and the commercial team sees margin before quoting rather than after. Popular enough internally that it's being redesigned from a tool into a product.",
     notes: "Pricing data and rates are confidential and not shown here.",
   },
   {

@@ -4,17 +4,18 @@ import { ProjectCard } from "@/components/project-card";
 import { Experience } from "@/components/experience";
 import { projects } from "@/lib/projects";
 import { site } from "@/lib/site";
-import { careerStart, companies, companySpan, formatDuration, monthsBetween, nowYM } from "@/lib/experience";
+import { careerStart, companies, companySpan, education, formatDuration, formatYM, monthsBetween, nowYM } from "@/lib/experience";
 import profile from "@/public/images/mhykol.jpg";
 
 // Durations are computed on the server; recompute daily so they never go stale.
 export const revalidate = 86400;
 
 const skills: { area: string; items: string[] }[] = [
-  { area: "Product & web", items: ["TypeScript", "React", "Next.js", "Tailwind", "Node"] },
-  { area: "Data & backend", items: ["Supabase", "Postgres", "SQL Server", "C# / .NET", "Python", "Go"] },
-  { area: "Infrastructure & ops", items: ["Vercel", "Hyper-V", "XCP-ng", "UniFi", "Microsoft 365", "Entra ID", "CrowdStrike"] },
-  { area: "Manufacturing systems", items: ["MRP (Progress Plus)", "PLM (SmarTeam, 3DEXPERIENCE)", "IATF 16949 / PPAP"] },
+  { area: "Product & web", items: ["TypeScript", "React", "Next.js", "Tailwind"] },
+  { area: "Data & AI", items: ["Python", "pandas", "SQL", "Pricing models", "Geometry feature extraction", "LLM integration", "Local inference (Apple Silicon)"] },
+  { area: "Backend", items: ["Supabase", "Postgres", "SQL Server", "C# / .NET", "Node", "Go"] },
+  { area: "Infrastructure & ops", items: ["Vercel", "Hyper-V", "XCP-ng", "UniFi", "Microsoft 365", "Entra ID", "CrowdStrike", "Cyber Essentials", "TISAX"] },
+  { area: "Manufacturing systems", items: ["MRP (Progress Plus)", "PLM (SmarTeam, 3DEXPERIENCE)", "IATF 16949 / PPAP", "2D Data Matrix traceability", "AI-driven nesting"] },
 ];
 
 function SectionHeading({ n, children }: { n: string; children: React.ReactNode }) {
@@ -34,7 +35,7 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-2xl px-5">
       {/* Hero */}
-      <section className="rise grid items-center gap-8 pb-10 pt-16 sm:grid-cols-[1fr_auto] sm:pt-20">
+      <section className="rise grid items-center gap-6 pb-10 pt-10 sm:grid-cols-[1fr_auto] sm:gap-8 sm:pt-20">
         <div>
           <div className="flex items-center gap-3">
             <Image
@@ -50,10 +51,23 @@ export default function Home() {
           <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">{site.name}</h1>
           <p className="mt-1 text-lg text-muted">{site.title}</p>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-            {site.tagline} Currently at TECNIQ, building the products that quote, track and
-            certify carbon parts for some of the most demanding car programmes in the world.
+            {site.tagline} At TECNIQ that means pricing models built on ten programmes of
+            historic costings, geometry analysis that rates a part before anyone opens CAD,
+            AI-driven nesting that took material efficiency from 40% to 90%, and the estate
+            behind five sites. I ship fast and own what I ship.
           </p>
-          <div className="mt-6 flex flex-wrap gap-2 text-sm">
+          <p className="mt-5 text-sm leading-relaxed text-muted">
+            <span aria-hidden className="relative mr-2 inline-flex h-2 w-2 align-middle">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            Taking on projects through{" "}
+            <a href="#consulting" className="text-fg underline-offset-4 hover:underline">
+              {site.company}
+            </a>
+            . Also open to senior software and DevOps roles.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2 text-sm">
             <a
               href={`mailto:${site.email}`}
               className="rounded-md border border-fg bg-fg px-3.5 py-2 font-medium text-bg transition hover:opacity-90"
@@ -78,27 +92,77 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hidden w-64 sm:block">
+        <div className="order-first mx-auto w-44 sm:order-none sm:w-64">
           <ModelLazy />
         </div>
       </section>
 
       {/* Stats */}
-      <section className="rise grid grid-cols-3 divide-x divide-line rounded-xl border border-line bg-card" style={{ animationDelay: "60ms" }}>
+      <section
+        className="rise grid grid-cols-2 overflow-hidden rounded-xl border border-line bg-card sm:grid-cols-4"
+        style={{ animationDelay: "60ms" }}
+      >
         <Stat label="In software">{career}</Stat>
         <Stat label="At TECNIQ">{tecniq.duration}</Stat>
-        <Stat label="Products shipped">3</Stat>
+        <Stat label="Tools shipped">30+</Stat>
+        <Stat label="Hypercar programmes">5</Stat>
+      </section>
+
+      {/* Consulting */}
+      <section id="consulting" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "270ms" }}>
+        <SectionHeading n="01">Consulting</SectionHeading>
+        <div className="mt-6 overflow-hidden rounded-xl border border-line bg-card">
+          <div className="border-b border-line px-5 py-5 sm:px-6">
+            <img src="/brand/logo-white.png" alt={site.company} className="hidden h-12 w-auto dark:block" />
+            <img src="/brand/logo-black.png" alt={site.company} className="h-12 w-auto dark:hidden" />
+            <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-muted">
+              Software and AI tooling for manufacturing and engineering businesses, built by
+              someone who has run the shop floor systems, not just read about them. Small,
+              fixed-scope engagements that ship.
+            </p>
+          </div>
+          <ul className="grid gap-px bg-line sm:grid-cols-3">
+            {[
+              {
+                t: "Internal tools that replace spreadsheets",
+                d: "Quoting, approvals, traceability, reporting. Web apps your team actually uses, on your own data.",
+              },
+              {
+                t: "AI where it earns its place",
+                d: "LLM-assisted matching, document ingest and search over your own records. On-prem when the data can't leave the building.",
+              },
+              {
+                t: "Infrastructure that stays up",
+                d: "Microsoft 365, virtualisation, segmented networks, Cyber Essentials and TISAX readiness for supplier audits.",
+              },
+            ].map((x) => (
+              <li key={x.t} className="bg-card px-5 py-4 sm:px-6">
+                <h3 className="text-sm font-medium tracking-tight">{x.t}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">{x.d}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-4 sm:px-6">
+            <p className="text-sm text-muted">Tell me the problem. I'll tell you if I can fix it and what it costs.</p>
+            <a
+              href={`mailto:${site.email}?subject=${encodeURIComponent("Project enquiry")}`}
+              className="rounded-md border border-fg bg-fg px-3.5 py-2 text-sm font-medium text-bg transition hover:opacity-90"
+            >
+              Start a conversation
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Experience */}
       <section id="experience" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "120ms" }}>
-        <SectionHeading n="01">Experience</SectionHeading>
+        <SectionHeading n="02">Experience</SectionHeading>
         <Experience now={now} />
       </section>
 
       {/* Skills */}
       <section className="rise pt-16" style={{ animationDelay: "180ms" }}>
-        <SectionHeading n="02">Skills</SectionHeading>
+        <SectionHeading n="03">Skills</SectionHeading>
         <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2">
           {skills.map((g) => (
             <div key={g.area}>
@@ -115,9 +179,25 @@ export default function Home() {
         </dl>
       </section>
 
+      {/* Education */}
+      <section className="rise pt-16" style={{ animationDelay: "210ms" }}>
+        <SectionHeading n="04">Education</SectionHeading>
+        <div className="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-line pt-4">
+          <p className="text-sm">
+            <span className="font-medium tracking-tight">{education.degree}</span>
+            <span className="text-muted">, {education.grade}</span>
+            <span className="mx-1.5 text-faint">·</span>
+            <span className="text-muted">{education.school}</span>
+          </p>
+          <p className="font-mono text-xs text-faint">
+            {formatYM(education.start)} – {formatYM(education.end)}
+          </p>
+        </div>
+      </section>
+
       {/* Work */}
       <section id="work" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "240ms" }}>
-        <SectionHeading n="03">Selected work</SectionHeading>
+        <SectionHeading n="05">Selected work</SectionHeading>
         <div className="mt-6 grid gap-3">
           {projects.map((p) => (
             <ProjectCard key={p.slug} project={p} />
@@ -127,10 +207,10 @@ export default function Home() {
 
       {/* Contact */}
       <section id="contact" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "300ms" }}>
-        <SectionHeading n="04">Contact</SectionHeading>
+        <SectionHeading n="06">Contact</SectionHeading>
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">
-          Open to conversations about software, automation and AI tooling for manufacturing and
-          engineering businesses. Email is best.
+          Hiring for a senior software or DevOps role, or have a project for {site.company}?
+          Email is best; I reply within a day.
         </p>
         <dl className="mt-5 grid gap-2 text-sm">
           <Row label="Email">
@@ -156,7 +236,7 @@ export default function Home() {
 
 function Stat({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="px-4 py-3.5 sm:px-5">
+    <div className="border-line px-4 py-3.5 [&:nth-child(2n)]:border-l sm:[&:not(:first-child)]:border-l [&:nth-child(n+3)]:border-t sm:[&:nth-child(n+3)]:border-t-0 sm:px-5">
       <dt className="font-mono text-[10px] uppercase tracking-wider text-faint">{label}</dt>
       <dd className="mt-1 whitespace-nowrap text-sm font-semibold tracking-tight sm:text-lg">{children}</dd>
     </div>

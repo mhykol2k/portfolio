@@ -18,45 +18,31 @@ export const companies: Company[] = [
     name: "TECNIQ",
     where: "Essex, UK",
     blurb:
-      "Tier 1 supplier of carbon fibre body structures and interior trim for ultra-premium automotive programmes. Small runs, exacting OEM customers.",
+      "Tier 1 supplier of carbon fibre body structures and interiors for ultra-premium OEM programmes, including the McLaren W1, Aston Martin Valhalla and Valkyrie, Mercedes-AMG ONE and Gordon Murray T.33. Small runs, no tolerance for error.",
     roles: [
       {
         title: "DevOps & Software Engineer",
         start: "2023-12",
         points: [
-          "Designed and shipped QuoteDesk and STEP Quoter, the internal products the commercial and engineering teams now quote with.",
-          "Replaced a manual Excel and VBA timesheet approval process with a web app: Microsoft sign-in, spreadsheet ingest, per-director exports.",
-          "Led the MRP rollout across two OEM programmes, then built the production reporting suite and executive dashboards on top of it.",
-          "Leading the PLM migration from SmarTeam to Dassault 3DEXPERIENCE.",
-          "Own the infrastructure: Microsoft 365 and Entra ID, Hyper-V and XCP-ng virtualisation, a full multi-site network rebuild, endpoint security, Cyber Essentials and TISAX.",
+          "Built QuoteDesk, the quoting engine for a bespoke-options OEM programme: spec-pack import, rules-based pricing with certainty-scored proposals, branded PDF output. Quote time per car went from 4 hours to 30 minutes.",
+          "Built STEP Quoter: extracts geometry features from a dropped CAD file, scores complexity, and prices against a dataset of ten costed programmes (roughly 8,000 parts with geometry), with margin visible before anything is sent. 30 to 40 people across commercial and engineering use the two tools daily.",
+          "Replaced a manual Excel and VBA timesheet approval process with a web app: Microsoft sign-in, spreadsheet ingest, per-director exports for 21 approvers.",
+          "Led the MRP rollout across two OEM programmes, then built the analytics on top of it: daily production breakdowns, departmental target-vs-actual dashboards and executive reports from raw MRP exports. Now leading the PLM migration from SmarTeam to Dassault 3DEXPERIENCE.",
+          "Own the estate end to end across 5 sites: rebuilt 13 VMs from bare metal, redesigned a flat network into a segmented multi-site one, refreshed 100+ devices including custom-built CAD workstations, and run Microsoft 365, Entra ID, CrowdStrike, Cyber Essentials and TISAX.",
+          "Scoped and costed on-prem LLM inference on Apple Silicon so OEM data can be used with AI without leaving the building.",
         ],
-        stack: ["TypeScript", "Next.js", "Supabase", "Vercel", "Python", "Hyper-V", "Microsoft 365"],
+        stack: ["TypeScript", "Next.js", "Supabase", "Vercel", "Python", "Hyper-V", "XCP-ng", "UniFi", "Microsoft 365"],
       },
       {
-        title: "Software Engineer",
+        title: "Software & Data Engineer",
         start: "2022-12",
         end: "2023-11",
         points: [
-          "Built the company's first in-house inventory control system to bring part-level traceability into production.",
-          "Took ownership of the internal tooling backlog and the IT estate alongside development work.",
+          "Carbon kit-cutting waste project: analysed cut data across the programmes, specified a new kit-cutting machine and introduced AI-driven nesting. Material efficiency went from 40% to 90%.",
+          "Introduced digital traceability on the shop floor with 2D Data Matrix marking, so every part carries its history from ply to assembly.",
+          "Took on the IT estate alongside development and started the groundwork for the network and virtualisation rebuild.",
         ],
-        stack: ["C#", "ASP.NET", "SQL Server"],
-      },
-    ],
-  },
-  {
-    name: "Great Danes",
-    where: "Frinton-on-Sea, UK",
-    blurb: "Hospitality business.",
-    roles: [
-      {
-        title: "Software Developer",
-        start: "2021-07",
-        end: "2022-12",
-        points: [
-          "Built a cross-platform EPOS system from scratch: Flutter front end, Go and MySQL backend, receipt printing and stock control.",
-        ],
-        stack: ["Flutter", "Dart", "Go", "MySQL"],
+        stack: ["C#", ".NET", "SQL Server", "Python", "pandas"],
       },
     ],
   },
@@ -128,8 +114,9 @@ export function companySpan(c: Company, now: string) {
   };
 }
 
+// First month of professional software work. Set explicitly so it can predate the roles listed above.
+export const CAREER_START = "2021-07";
+
 export function careerStart(): string {
-  return companies
-    .flatMap((c) => c.roles.map((r) => r.start))
-    .sort()[0];
+  return CAREER_START;
 }
