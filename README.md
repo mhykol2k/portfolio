@@ -1,7 +1,16 @@
-# Portfolio
+# mclain.co.uk
 
-The website features a modern and dynamic design, thanks to the use of Three.js, a popular 3D graphics library that allowed me to create and display 3D models, animations, and visual effects. This gives the website a unique and immersive feel that sets it apart from traditional portfolio websites.
+Personal site. Next.js 15 (App Router), Tailwind 4, TypeScript, a small Three.js model in the hero. Static output, hosted on Vercel.
 
-<br>
+## Develop
 
-The website is built using Next.js, a powerful React-based framework that provides server-side rendering, static site generation, and other features to improve website performance and user experience. These features helped me to optimize the website's speed and performance, making it faster and more efficient for users.
+```sh
+npm install
+npm run dev
+```
+
+## Content
+
+- `lib/site.ts` — name, title, tagline, links
+- `lib/projects.ts` — project case studies (one entry per `/work/[slug]` page)
+- `app/page.tsx` — experience, education and toolbox
