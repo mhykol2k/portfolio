@@ -48,14 +48,43 @@ export const companies: Company[] = [
   },
 ];
 
-export const education = {
-  school: "Canterbury Christ Church University",
-  degree: "BEng Software Engineering",
-  grade: "First Class Honours",
-  start: "2019-09",
-  end: "2022-06",
-  where: "Canterbury, UK",
+export type Education = {
+  school: string;
+  degree: string;
+  grade?: string;
+  start: string;
+  end?: string; // omitted = in progress
+  where: string;
+  detail?: string;
+  modules?: string[];
 };
+
+export const education: Education[] = [
+  {
+    school: "Canterbury Christ Church University",
+    degree: "BEng Software Engineering",
+    grade: "First Class Honours",
+    start: "2019-09",
+    end: "2022-06",
+    where: "Canterbury, UK",
+    modules: ["Machine Learning and AI", "Software Engineering Fundamentals"],
+  },
+  {
+    school: "University Centre Colchester",
+    degree: "Level 5 Leadership and Management Development",
+    start: "2024-10",
+    end: "2026-08",
+    where: "Colchester, UK",
+    detail: "Part of TECNIQ's Future Leaders Programme.",
+    modules: [
+      "Leading people and teams",
+      "Strategic thinking and planning",
+      "Managing change",
+      "Stakeholder communication",
+      "Performance management",
+    ],
+  },
+];
 
 // ---- date helpers (month granularity, LinkedIn-style inclusive counting) ----
 

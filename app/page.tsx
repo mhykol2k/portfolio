@@ -14,6 +14,7 @@ const skills: { area: string; items: string[] }[] = [
   { area: "Backend", items: ["Supabase", "Postgres", "SQL Server", "C# / .NET", "Node", "Go"] },
   { area: "Infrastructure & ops", items: ["Vercel", "Hyper-V", "XCP-ng", "UniFi", "Microsoft 365", "Entra ID", "CrowdStrike", "Cyber Essentials", "TISAX"] },
   { area: "Manufacturing systems", items: ["MRP (Progress Plus)", "PLM (SmarTeam, 3DEXPERIENCE)", "IATF 16949 / PPAP", "2D Data Matrix traceability", "AI-driven nesting"] },
+  { area: "Leadership & delivery", items: ["Project delivery", "Stakeholder management", "Steering committees", "Executive reporting", "Vendor and procurement", "Change management", "Mentoring apprentices"] },
 ];
 
 function SectionHeading({ n, children }: { n: string; children: React.ReactNode }) {
@@ -49,10 +50,9 @@ export default function Home() {
           <h1 className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">{site.name}</h1>
           <p className="mt-1 text-lg text-muted">{site.title}</p>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-            {site.tagline} At TECNIQ that means pricing models built on ten programmes of
-            historic costings, geometry analysis that rates a part before anyone opens CAD,
-            AI-driven nesting that took material efficiency from 40% to 90%, and the estate
-            behind five sites. I ship fast and own what I ship.
+            {site.tagline} Full-stack products, data and AI tooling, automation. Four years
+            in a demanding engineering business taught me to ship fast, own the outcome, and
+            use AI where it earns its place, not where it looks good on a slide.
           </p>
           <p className="mt-5 text-sm leading-relaxed text-muted">
             <span aria-hidden className="relative mr-2 inline-flex h-2 w-2 align-middle">
@@ -152,15 +152,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Education */}
+      <section className="rise pt-16" style={{ animationDelay: "210ms" }}>
+        <SectionHeading n="02">Education</SectionHeading>
+        <ol className="mt-6 divide-y divide-line border-t border-line">
+          {education.map((e) => (
+            <li key={e.degree} className="py-4">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p className="text-sm">
+                  <span className="font-medium tracking-tight">{e.degree}</span>
+                  {e.grade && <span className="text-muted">, {e.grade}</span>}
+                  <span className="mx-1.5 text-faint">·</span>
+                  <span className="text-muted">{e.school}</span>
+                </p>
+                <p className="font-mono text-xs text-faint">
+                  {formatYM(e.start)} – {e.end ? formatYM(e.end) : "present"}
+                </p>
+              </div>
+              {e.detail && <p className="mt-1.5 text-sm leading-relaxed text-muted">{e.detail}</p>}
+              {e.modules && (
+                <ul className="mt-2 flex flex-wrap gap-1.5">
+                  {e.modules.map((m) => (
+                    <li key={m} className="rounded-md border border-line px-2 py-0.5 text-[11px] text-muted">
+                      {m}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* Experience */}
       <section id="experience" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "120ms" }}>
-        <SectionHeading n="02">Experience</SectionHeading>
+        <SectionHeading n="03">Experience</SectionHeading>
         <Experience now={now} />
       </section>
 
       {/* Skills */}
       <section className="rise pt-16" style={{ animationDelay: "180ms" }}>
-        <SectionHeading n="03">Skills</SectionHeading>
+        <SectionHeading n="04">Skills</SectionHeading>
         <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2">
           {skills.map((g) => (
             <div key={g.area}>
@@ -175,22 +207,6 @@ export default function Home() {
             </div>
           ))}
         </dl>
-      </section>
-
-      {/* Education */}
-      <section className="rise pt-16" style={{ animationDelay: "210ms" }}>
-        <SectionHeading n="04">Education</SectionHeading>
-        <div className="mt-6 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-t border-line pt-4">
-          <p className="text-sm">
-            <span className="font-medium tracking-tight">{education.degree}</span>
-            <span className="text-muted">, {education.grade}</span>
-            <span className="mx-1.5 text-faint">·</span>
-            <span className="text-muted">{education.school}</span>
-          </p>
-          <p className="font-mono text-xs text-faint">
-            {formatYM(education.start)} – {formatYM(education.end)}
-          </p>
-        </div>
       </section>
 
       {/* Contact */}
