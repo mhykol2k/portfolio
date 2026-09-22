@@ -83,6 +83,7 @@ export function Experience({ now = nowYM() }: { now?: string }) {
                             </li>
                           ))}
                         </ul>
+                        {r.stack && r.stack.length > 0 && (
                         <ul className="mt-3 flex flex-wrap gap-1.5">
                           {r.stack.map((st) => (
                             <li key={st} className="rounded-md border border-line px-2 py-0.5 text-[11px] text-muted">
@@ -90,6 +91,7 @@ export function Experience({ now = nowYM() }: { now?: string }) {
                             </li>
                           ))}
                         </ul>
+                        )}
                       </details>
                     </li>
                   );

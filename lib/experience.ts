@@ -3,7 +3,7 @@ export type Role = {
   start: string; // YYYY-MM
   end?: string; // YYYY-MM, omitted = present
   points: string[];
-  stack: string[];
+  stack?: string[];
 };
 
 export type Company = {
@@ -22,7 +22,7 @@ export const companies: Company[] = [
     roles: [
       {
         title: "DevOps & Software Engineer",
-        start: "2023-12",
+        start: "2024-01",
         points: [
           "Built QuoteDesk, the quoting engine for a bespoke-options OEM programme: spec-pack import, rules-based pricing with certainty-scored proposals, branded PDF output. Quote time per car went from 4 hours to 30 minutes.",
           "Built STEP Quoter: extracts geometry features from a dropped CAD file, scores complexity, and prices against a dataset of ten costed programmes (roughly 8,000 parts with geometry), with margin visible before anything is sent. 30 to 40 people across commercial and engineering use the two tools daily.",
@@ -35,14 +35,31 @@ export const companies: Company[] = [
       },
       {
         title: "Software & Data Engineer",
-        start: "2022-12",
-        end: "2023-11",
+        start: "2023-01",
+        end: "2024-01",
         points: [
           "Carbon kit-cutting waste project: analysed cut data across the programmes, specified a new kit-cutting machine and introduced AI-driven nesting. Material efficiency went from 40% to 90%.",
           "Introduced digital traceability on the shop floor with 2D Data Matrix marking, so every part carries its history from ply to assembly.",
           "Took on the IT estate alongside development and started the groundwork for the network and virtualisation rebuild.",
         ],
         stack: ["C#", ".NET", "SQL Server", "Python", "pandas"],
+      },
+    ],
+  },
+  {
+    name: "Vectayn Ltd",
+    where: "Essex, UK",
+    blurb:
+      "Engineering consultancy founded in 1991, providing CAE and predictive analysis (FEA, crash, NVH, fatigue and durability) to automotive OEMs, aerospace and security barrier programmes.",
+    roles: [
+      {
+        title: "IT Lead",
+        start: "2026-05",
+        points: [
+          "Own IT for the business end to end, alongside my role at TECNIQ.",
+          "Led the full-scale migration of Vectayn's infrastructure into TECNIQ's data centre when the business moved on site.",
+          "Support a team of CAE and FEA analysts day to day, keeping compute-heavy simulation work running.",
+        ],
       },
     ],
   },

@@ -28,7 +28,7 @@ function SectionHeading({ n, children }: { n: string; children: React.ReactNode 
 
 export default function Home() {
   const now = nowYM();
-  const tecniq = companySpan(companies[0], now);
+  const tecniq = companySpan(companies.find((c) => c.name === "TECNIQ")!, now);
   const career = formatDuration(monthsBetween(careerStart(), now));
 
   return (
