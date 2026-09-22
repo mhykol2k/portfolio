@@ -114,24 +114,24 @@ export default function Home() {
             <img src="/brand/logo-white.png" alt={site.company} className="hidden h-12 w-auto dark:block" />
             <img src="/brand/logo-black.png" alt={site.company} className="h-12 w-auto dark:hidden" />
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-muted">
-              Software and AI tooling for manufacturing and engineering businesses, built by
-              someone who has run the shop floor systems, not just read about them. Small,
-              fixed-scope engagements that ship.
+              Software engineering with AI and machine learning at its core. I take a business
+              problem, find the data that answers it, and ship a product your team actually
+              uses. Small, fixed-scope engagements that deliver.
             </p>
           </div>
           <ul className="grid gap-px bg-line sm:grid-cols-3">
             {[
               {
-                t: "Internal tools that replace spreadsheets",
-                d: "Quoting, approvals, traceability, reporting. Web apps your team actually uses, on your own data.",
+                t: "AI-powered software",
+                d: "Custom web apps with LLMs built in: document ingest, smart matching, search and assistants over your own data.",
               },
               {
-                t: "AI where it earns its place",
-                d: "LLM-assisted matching, document ingest and search over your own records. On-prem when the data can't leave the building.",
+                t: "Machine learning on your data",
+                d: "Pricing, forecasting and classification models trained on the records you already have, shipped as tools people use.",
               },
               {
-                t: "Infrastructure that stays up",
-                d: "Microsoft 365, virtualisation, segmented networks, Cyber Essentials and TISAX readiness for supplier audits.",
+                t: "Automation that replaces spreadsheets",
+                d: "Quoting, approvals, reporting and data pipelines rebuilt as reliable software, with AI where it earns its place.",
               },
             ].map((x) => (
               <li key={x.t} className="bg-card px-5 py-4 sm:px-6">
