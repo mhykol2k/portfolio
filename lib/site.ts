@@ -7,6 +7,6 @@ export const site = {
   github: "https://github.com/mhykol2k",
   linkedin: "https://www.linkedin.com/in/michaeljmclain/",
   location: "Essex, United Kingdom",
-  url: "https://mclain.co.uk",
+  url: "https://mclain.dev",
   company: "McLain & Associates",
 };

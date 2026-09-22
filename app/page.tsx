@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { ModelLazy } from "@/components/model-lazy";
-import { ProjectCard } from "@/components/project-card";
 import { Experience } from "@/components/experience";
-import { projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 import { careerStart, companies, companySpan, education, formatDuration, formatYM, monthsBetween, nowYM } from "@/lib/experience";
 import profile from "@/public/images/mhykol.jpg";
@@ -195,19 +193,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work */}
-      <section id="work" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "240ms" }}>
-        <SectionHeading n="05">Selected work</SectionHeading>
-        <div className="mt-6 grid gap-3">
-          {projects.map((p) => (
-            <ProjectCard key={p.slug} project={p} />
-          ))}
-        </div>
-      </section>
-
       {/* Contact */}
       <section id="contact" className="rise scroll-mt-20 pt-16" style={{ animationDelay: "300ms" }}>
-        <SectionHeading n="06">Contact</SectionHeading>
+        <SectionHeading n="05">Contact</SectionHeading>
         <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">
           Hiring for a senior software or DevOps role, or have a project for {site.company}?
           Email is best; I reply within a day.
